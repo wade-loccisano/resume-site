@@ -14,8 +14,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const theme = "light";
+  const theme = "dark";
   return (
-    <html lang="en">
+    <html lang="en" className={theme === "dark" ? "dark" : "light"}>
       <body className={inter.className}>{children}</body>
     </html>
   );
