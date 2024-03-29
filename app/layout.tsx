@@ -18,7 +18,11 @@ export default function RootLayout({
   const theme = "dark";
   return (
     <html lang="en" className={theme === "dark" ? "dark" : "light"}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header>The header</header>
+        {children}
+        <footer>The footer</footer>
+      </body>
     </html>
   );
 }
