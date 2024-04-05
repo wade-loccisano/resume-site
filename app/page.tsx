@@ -7,39 +7,52 @@ const resumeTemplate: string = `
   
   ## About:
   Dynamic and results - oriented Software Developer with a proven track record of delivering high - quality software solutions.Skilled in full - stack development, Agile methodologies, and continuous integration practices.Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
-  
+
   ## Skills:
 
-  Proficient in programming languages: JavaScript, TypeScript, C#
+  ### Programming Languages and Frameworks:
+
+  Proficient in programming languages: JavaScript, TypeScript, C#, Python
   Experienced in web development frameworks: React, Angular, NextJs
+
+  ### Database Management and ORM:
+
   Strong understanding of relational and NoSQL databases: MySQL, MongoDB
+  Worked with ORMs: Entity Framework, !!!
+
+  ### Development Tools and Methodologies:
+
   Familiarity with version control systems: Git
   Experienced with Agile development methodologies
-  Excellent problem - solving and analytical skills
+  Excellent problem-solving and analytical skills
   
   ## Experience:
-  Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
+  
+  ### Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
   
   Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
   Collaborated with cross - functional teams to design and implement scalable software solutions, adhering to Agile development practices.
   Participated in code reviews and quality assurance processes to ensure code integrity and performance.
   
   ## Projects:
-  Resume Site
+  
+  ### Resume Site
   
   Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
   Implemented a Docker container and deployed to!!! to allow multi - region availability.
   Added!!! analytics to track some basic information about users.
   
-  ## Certifications:
-  AWS Certified Cloud Practitioner
+  ## Qualifications:
   
   ### Education:
   Web Application Development Bootcamp
   Tech Elevator, City, State
   Graduated: February 2021
+
+  ### Certifications
+  AWS Certified Cloud Practitioner
   
-  ### References:
+  ## References:
   Available upon request.
 `;
 
@@ -60,9 +73,11 @@ export default function Home() {
 
         Proficient in programming languages: JavaScript, TypeScript, C#, Python
         Experienced in web development frameworks: React, Angular, NextJs
+
         Database Management and ORM:
 
         Strong understanding of relational and NoSQL databases and ORMs: MySQL, MongoDB, Entity Framework
+
         Development Tools and Methodologies:
 
         Familiarity with version control systems: Git
