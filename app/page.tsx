@@ -61,28 +61,54 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <section>
         {/* Splash Screen */}
-        # Wade Loccisano
-
-        [Pittsburgh, Pennsylvania, 16117] | [724-494-4379] | [wade.loccisano@gmail.com]
-
-        ## About:
-        Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
+        <div id="splash-section">
+          <div className="sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+            <div id="splash-container" className="flex flex-column">
+              <div id="left" className="flex-1">
+                <div className="text-xl">
+                  # Wade Loccisano
+                </div>
+                <div>
+                  {/* tagline */}
+                  Hello, my name is Wade Loccisano!
+                </div>
+                <button className="border border-black p-2">
+                  Contact
+                </button>
+              </div>
+              <div id="right" className="flex-1">
+                <div>
+                  ## About:
+                  Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section>
-        Programming Languages and Frameworks:
+      <section id="skills-section">
+        {/* <div className="max-w-[1200px]"> */}
+        <div className="sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+          <div>
+            Skills
+          </div>
+          <div className="text-4xl">
+            Programming Languages and Frameworks:
+          </div>
+          {/* Skills scroller */}
+          Proficient in programming languages: JavaScript, TypeScript, C#, Python
+          Experienced in web development frameworks: React, Angular, NextJs
 
-        Proficient in programming languages: JavaScript, TypeScript, C#, Python
-        Experienced in web development frameworks: React, Angular, NextJs
+          Database Management and ORM:
 
-        Database Management and ORM:
+          Strong understanding of relational and NoSQL databases and ORMs: MySQL, MongoDB, Entity Framework
 
-        Strong understanding of relational and NoSQL databases and ORMs: MySQL, MongoDB, Entity Framework
+          Development Tools and Methodologies:
 
-        Development Tools and Methodologies:
-
-        Familiarity with version control systems: Git
-        Experienced with Agile development methodologies
-        Excellent problem-solving and analytical skills
+          Familiarity with version control systems: Git
+          Experienced with Agile development methodologies
+          Excellent problem-solving and analytical skills
+        </div>
       </section>
       <section>
         ## Experience:

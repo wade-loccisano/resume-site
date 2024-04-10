@@ -30,14 +30,15 @@ export default function RootLayout({
 
 export function Header() {
   return (
-    <header className="text-center">
+    // <header className="text-center">
+    <header>
       <section>
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center">
           <div className="p-2">
             Wade Loccisano
           </div>
 
-          <div className="flex flex-row p-2">
+          {/* <div className="flex flex-row p-2">
             <div>
               Skills
             </div>
@@ -50,7 +51,7 @@ export function Header() {
             <div>
               Qualifications
             </div>
-          </div>
+          </div> */}
 
           <div className="flex flex-row p-2">
             Contact
