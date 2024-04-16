@@ -58,17 +58,17 @@ const resumeTemplate: string = `
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 font-sans">
       <section>
         {/* Splash Screen */}
         <div id="splash-section">
-          <div className="sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+          <div className="custom-max-width">
             <div id="splash-container" className="flex flex-column">
-              <div id="left" className="flex-1">
-                <div className="text-xl">
+              <div id="left" className="flex-1 py-16">
+                <div className="text-5xl">
                   # Wade Loccisano
                 </div>
-                <div>
+                <div className="text-xl">
                   {/* tagline */}
                   Hello, my name is Wade Loccisano!
                 </div>
@@ -76,7 +76,7 @@ export default function Home() {
                   Contact
                 </button>
               </div>
-              <div id="right" className="flex-1">
+              <div id="right" className="flex-1 py-16">
                 <div>
                   ## About:
                   Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
       <section id="skills-section">
         {/* <div className="max-w-[1200px]"> */}
-        <div className="sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+        <div className="custom-max-width">
           <div>
             Skills
           </div>
@@ -110,32 +110,38 @@ export default function Home() {
           Excellent problem-solving and analytical skills
         </div>
       </section>
-      <section>
-        ## Experience:
-        Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
+      <section id="experience-section">
+        <div className="custom-max-width">
+          ## Experience:
+          Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
 
-        Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
-        Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
-        Participated in code reviews and quality assurance processes to ensure code integrity and performance.
+          Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
+          Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
+          Participated in code reviews and quality assurance processes to ensure code integrity and performance.
+        </div>
       </section>
-      <section>
-        ## Projects:
-        Resume Site
+      <section id="project-section">
+        <div className="custom-max-width">
+          ## Projects:
+          Resume Site
 
-        Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
-        Implemented a Docker container and deployed to !!! to allow multi-region availability.
-        Added !!! analytics to track some basic information about users.
+          Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
+          Implemented a Docker container and deployed to !!! to allow multi-region availability.
+          Added !!! analytics to track some basic information about users.
+        </div>
       </section>
-      <section>
-        ## Certifications:
-        AWS Certified Cloud Practitioner
+      <section id="certification-section">
+        <div className="custom-max-width">
+          ## Certifications:
+          AWS Certified Cloud Practitioner
 
-        ### Education:
-        Web Application Development Bootcamp
-        Tech Elevator, City, State
-        Graduated: February 2021
+          ### Education:
+          Web Application Development Bootcamp
+          Tech Elevator, City, State
+          Graduated: February 2021
+        </div>
       </section>
-      <section>
+      <section id="reference-section">
         {/* ### Testimonials */}
         ### References:
         Available upon request.

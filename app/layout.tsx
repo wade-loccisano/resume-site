@@ -31,10 +31,10 @@ export default function RootLayout({
 export function Header() {
   return (
     // <header className="text-center">
-    <header>
-      <section>
-        <div className="flex flex-row justify-center">
-          <div className="p-2">
+    <header >
+      <section id="header-section" className="bg-white">
+        <div className="flex flex-row justify-between px-[20rem] ">
+          <div className="p-2 text-xl">
             Wade Loccisano
           </div>
 
