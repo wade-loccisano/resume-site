@@ -1,113 +1,151 @@
 import Image from "next/image";
 
+const resumeTemplate: string = `
+  # Wade Loccisano
+
+  [Pittsburgh, Pennsylvania, 16117] | [724 - 494 - 4379] | [wade.loccisano@gmail.com]
+  
+  ## About:
+  Dynamic and results - oriented Software Developer with a proven track record of delivering high - quality software solutions.Skilled in full - stack development, Agile methodologies, and continuous integration practices.Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
+
+  ## Skills:
+
+  ### Programming Languages and Frameworks:
+
+  Proficient in programming languages: JavaScript, TypeScript, C#, Python
+  Experienced in web development frameworks: React, Angular, NextJs
+
+  ### Database Management and ORM:
+
+  Strong understanding of relational and NoSQL databases: MySQL, MongoDB
+  Worked with ORMs: Entity Framework, !!!
+
+  ### Development Tools and Methodologies:
+
+  Familiarity with version control systems: Git
+  Experienced with Agile development methodologies
+  Excellent problem-solving and analytical skills
+  
+  ## Experience:
+  
+  ### Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
+  
+  Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
+  Collaborated with cross - functional teams to design and implement scalable software solutions, adhering to Agile development practices.
+  Participated in code reviews and quality assurance processes to ensure code integrity and performance.
+  
+  ## Projects:
+  
+  ### Resume Site
+  
+  Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
+  Implemented a Docker container and deployed to!!! to allow multi - region availability.
+  Added!!! analytics to track some basic information about users.
+  
+  ## Qualifications:
+  
+  ### Education:
+  Web Application Development Bootcamp
+  Tech Elevator, City, State
+  Graduated: February 2021
+
+  ### Certifications
+  AWS Certified Cloud Practitioner
+  
+  ## References:
+  Available upon request.
+`;
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By Wade
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 font-sans">
+      <section>
+        {/* Splash Screen */}
+        <div id="splash-section">
+          <div className="custom-max-width">
+            <div id="splash-container" className="flex flex-column">
+              <div id="left" className="flex-1 py-16">
+                <div className="text-5xl">
+                  # Wade Loccisano
+                </div>
+                <div className="text-xl">
+                  {/* tagline */}
+                  Hello, my name is Wade Loccisano!
+                </div>
+                <button className="border border-black p-2">
+                  Contact
+                </button>
+              </div>
+              <div id="right" className="flex-1 py-16">
+                <div>
+                  ## About:
+                  Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <section id="skills-section">
+        {/* <div className="max-w-[1200px]"> */}
+        <div className="custom-max-width">
+          <div>
+            Skills
+          </div>
+          <div className="text-4xl">
+            Programming Languages and Frameworks:
+          </div>
+          {/* Skills scroller */}
+          Proficient in programming languages: JavaScript, TypeScript, C#, Python
+          Experienced in web development frameworks: React, Angular, NextJs
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          Database Management and ORM:
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          Strong understanding of relational and NoSQL databases and ORMs: MySQL, MongoDB, Entity Framework
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          Development Tools and Methodologies:
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          Familiarity with version control systems: Git
+          Experienced with Agile development methodologies
+          Excellent problem-solving and analytical skills
+        </div>
+      </section>
+      <section id="experience-section">
+        <div className="custom-max-width">
+          ## Experience:
+          Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
+          Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
+          Participated in code reviews and quality assurance processes to ensure code integrity and performance.
+        </div>
+      </section>
+      <section id="project-section">
+        <div className="custom-max-width">
+          ## Projects:
+          Resume Site
+
+          Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
+          Implemented a Docker container and deployed to !!! to allow multi-region availability.
+          Added !!! analytics to track some basic information about users.
+        </div>
+      </section>
+      <section id="certification-section">
+        <div className="custom-max-width">
+          ## Certifications:
+          AWS Certified Cloud Practitioner
+
+          ### Education:
+          Web Application Development Bootcamp
+          Tech Elevator, City, State
+          Graduated: February 2021
+        </div>
+      </section>
+      <section id="reference-section">
+        {/* ### Testimonials */}
+        ### References:
+        Available upon request.
+      </section>
     </main>
   );
 }

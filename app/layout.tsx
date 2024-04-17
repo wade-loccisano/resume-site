@@ -18,7 +18,49 @@ export default function RootLayout({
   const theme = "dark";
   return (
     <html lang="en" className={theme === "dark" ? "dark" : "light"}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <header>The header</header> */}
+        <Header />
+        {children}
+        <footer>The footer</footer>
+      </body>
     </html>
+  );
+}
+
+export function Header() {
+  return (
+    // <header className="text-center">
+    <header >
+      <section id="header-section" className="bg-white">
+        <div className="flex flex-row justify-between px-[20rem] ">
+          <div className="p-2 text-xl">
+            Wade Loccisano
+          </div>
+
+          {/* <div className="flex flex-row p-2">
+            <div>
+              Skills
+            </div>
+            <div>
+              Experience
+            </div>
+            <div>
+              Projects
+            </div>
+            <div>
+              Qualifications
+            </div>
+          </div> */}
+
+          <div className="flex flex-row p-2">
+            Contact
+            <div>
+              Theme
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
   );
 }
