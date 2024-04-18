@@ -58,17 +58,17 @@ const resumeTemplate: string = `
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 font-sans">
-      <section>
+    <main className="flex min-h-screen flex-col items-center justify-between font-sans">
+      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white">
         {/* Splash Screen */}
-        <div id="splash-section">
+        <div id="splash-section" className="min-w-[100vw]">
           <div className="custom-max-width">
-            <div id="splash-container" className="flex flex-column">
-              <div id="left" className="flex-1 py-16">
-                <div className="text-5xl">
+            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32">
+              <div id="left" className="flex-1 lg:flex-1/2">
+                <div className="text-5xl mb-2">
                   # Wade Loccisano
                 </div>
-                <div className="text-xl">
+                <div className="text-xl mb-6">
                   {/* tagline */}
                   Hello, my name is Wade Loccisano!
                 </div>
@@ -76,9 +76,11 @@ export default function Home() {
                   Contact
                 </button>
               </div>
-              <div id="right" className="flex-1 py-16">
-                <div>
+              <div id="right" className="flex-1 lg:flex-1/2">
+                <div className="text-xl">
                   ## About:
+                </div>
+                <div className="text-lg">
                   Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
                 </div>
               </div>
@@ -86,31 +88,35 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="skills-section">
+      <section id="skills-section" className="min-h-screen flex justify-center">
         {/* <div className="max-w-[1200px]"> */}
         <div className="custom-max-width">
-          <div>
-            Skills
+          <div id="skills-container" className="flex flex-col py-32">
+            <div>
+              Skills
+            </div>
+            <div className="text-4xl">
+              Programming Languages and Frameworks:
+            </div>
+            <div>
+              {/* Skills scroller */}
+              Proficient in programming languages: JavaScript, TypeScript, C#, Python
+              Experienced in web development frameworks: React, Angular, NextJs
+
+              Database Management and ORM:
+
+              Strong understanding of relational and NoSQL databases and ORMs: MySQL, MongoDB, Entity Framework
+
+              Development Tools and Methodologies:
+
+              Familiarity with version control systems: Git
+              Experienced with Agile development methodologies
+              Excellent problem-solving and analytical skills
+            </div>
           </div>
-          <div className="text-4xl">
-            Programming Languages and Frameworks:
-          </div>
-          {/* Skills scroller */}
-          Proficient in programming languages: JavaScript, TypeScript, C#, Python
-          Experienced in web development frameworks: React, Angular, NextJs
-
-          Database Management and ORM:
-
-          Strong understanding of relational and NoSQL databases and ORMs: MySQL, MongoDB, Entity Framework
-
-          Development Tools and Methodologies:
-
-          Familiarity with version control systems: Git
-          Experienced with Agile development methodologies
-          Excellent problem-solving and analytical skills
         </div>
       </section>
-      <section id="experience-section">
+      <section id="experience-section" className="min-h-screen">
         <div className="custom-max-width">
           ## Experience:
           Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
@@ -120,7 +126,7 @@ export default function Home() {
           Participated in code reviews and quality assurance processes to ensure code integrity and performance.
         </div>
       </section>
-      <section id="project-section">
+      <section id="project-section" className="min-h-screen">
         <div className="custom-max-width">
           ## Projects:
           Resume Site
@@ -130,7 +136,7 @@ export default function Home() {
           Added !!! analytics to track some basic information about users.
         </div>
       </section>
-      <section id="certification-section">
+      <section id="certification-section" className="min-h-screen">
         <div className="custom-max-width">
           ## Certifications:
           AWS Certified Cloud Practitioner
@@ -141,11 +147,11 @@ export default function Home() {
           Graduated: February 2021
         </div>
       </section>
-      <section id="reference-section">
+      <section id="reference-section" className="min-h-screen">
         {/* ### Testimonials */}
         ### References:
         Available upon request.
       </section>
-    </main>
+    </main >
   );
 }
