@@ -18,6 +18,8 @@
 
 .custom-max-width {
   @apply max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px];
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {

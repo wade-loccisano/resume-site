@@ -18,7 +18,7 @@ export default function RootLayout({
   const theme = "dark";
   return (
     <html lang="en" className={theme === "dark" ? "dark" : "light"}>
-      <body className={inter.className}>
+      <body className={`${inter.className} + min-h-screen`}>
         {/* <header>The header</header> */}
         <Header />
         {children}
@@ -32,8 +32,8 @@ export function Header() {
   return (
     // <header className="text-center">
     <header >
-      <section id="header-section" className="bg-white">
-        <div className="flex flex-row justify-between px-[20rem] ">
+      <section id="header-section" className="bg-white min-h-[60px]">
+        <div className="flex flex-row justify-between px-[20rem]">
           <div className="p-2 text-xl">
             Wade Loccisano
           </div>
