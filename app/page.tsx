@@ -56,12 +56,46 @@ const resumeTemplate: string = `
   Available upon request.
 `;
 
+const skills = [
+  {
+    skillName: 'Front-end',
+    listItems: [
+      "HTML/CSS",
+      "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
+      "TypeScript (Next.js, TSX, Angular)",
+    ],
+  },
+  {
+    skillName: 'Backend and Database',
+    listItems: [
+      "C# (.NET, REST APIs)",
+      "SQL (Postgresql)",
+      "ORM (Entity Framework, Prisma)",
+    ],
+  },
+  {
+    skillName: 'DevOps and Cloud',
+    listItems: [
+      "Cloud (AWS)",
+      "Python (Flask, Pandas)",
+      "Version Control and CI/CD (Git, Docker)",
+    ],
+  },
+  {
+    skillName: 'Agile',
+    listItems: [
+      "Experienced with Agile development methodologies",
+      "Excellent problem-solving and analytical skills",
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-sans">
-      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white">
+      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
         {/* Splash Screen */}
-        <div id="splash-section" className="min-w-[100vw]">
+        <div id="splash-section">
           <div className="custom-max-width">
             <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32">
               <div id="left" className="flex-1 lg:flex-1/2">
@@ -88,7 +122,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="skills-section" className="min-h-screen flex justify-center">
+      <section id="skills-section" className="min-h-screen flex justify-center min-w-[100%]">
         {/* <div className="max-w-[1200px]"> */}
         <div className="custom-max-width">
           <div id="skills-container" className="flex flex-col py-32">
@@ -100,6 +134,48 @@ export default function Home() {
             </div>
             <div>
               {/* Skills scroller */}
+              <div className="py-4 flex flex-col justify-between lg:flex-row">
+                {skills.map((skill, i) => {
+                  return (
+                    <div key={i} className="py-2 flex">
+                      <div className="w-[244px] rounded-lg shadow-lg">
+                        <div className="bg-cover bg-red-200 h-8 sm:h-12"></div>
+                        <div className="p-2">
+                          <div className="text-2xl">
+                            {skill.skillName}
+                          </div>
+                          {skill.listItems.map((item, i) => {
+                            return (
+                              <p key={i} className="text-md">
+                                {item}
+                              </p>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* <div className="w-[244px] border border-black">
+                  <div className="bg-cover bg-red-200 h-8 sm:h-12"></div>
+                  <div className="text-2xl">
+                    Skill Name
+                  </div>
+                  <div>
+
+                  </div>
+                </div> */}
+              </div>
+              <div className="flex">
+                <button>
+                  Scroll Left
+                </button>
+                <button>
+                  Scroll Right
+                </button>
+              </div>
+            </div>
+            {/* <div>
               Proficient in programming languages: JavaScript, TypeScript, C#, Python
               Experienced in web development frameworks: React, Angular, NextJs
 
@@ -112,9 +188,32 @@ export default function Home() {
               Familiarity with version control systems: Git
               Experienced with Agile development methodologies
               Excellent problem-solving and analytical skills
-            </div>
+            </div> */}
           </div>
         </div>
+        {/* <div className="custom-max-width">
+            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32">
+              <div id="left" className="flex-1 lg:flex-1/2">
+                <div className="text-5xl mb-2">
+                  # Wade Loccisano
+                </div>
+                <div className="text-xl mb-6">
+                  Hello, my name is Wade Loccisano!
+                </div>
+                <button className="border border-black p-2">
+                  Contact
+                </button>
+              </div>
+              <div id="right" className="flex-1 lg:flex-1/2">
+                <div className="text-xl">
+                  ## About:
+                </div>
+                <div className="text-lg">
+                  Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
+                </div>
+              </div>
+            </div>
+          </div> */}
       </section>
       <section id="experience-section" className="min-h-screen">
         <div className="custom-max-width">
