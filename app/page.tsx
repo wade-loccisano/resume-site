@@ -134,22 +134,24 @@ export default function Home() {
             </div>
             <div>
               {/* Skills scroller */}
-              <div className="py-4 flex justify-between">
+              <div className="py-4 flex flex-col justify-between lg:flex-row">
                 {skills.map((skill, i) => {
                   return (
-                    <div key={i} className="w-[244px] rounded-lg shadow-lg">
-                      <div className="bg-cover bg-red-200 h-8 sm:h-12"></div>
-                      <div className="p-2">
-                        <div className="text-2xl">
-                          {skill.skillName}
+                    <div key={i} className="py-2 flex">
+                      <div className="w-[244px] rounded-lg shadow-lg">
+                        <div className="bg-cover bg-red-200 h-8 sm:h-12"></div>
+                        <div className="p-2">
+                          <div className="text-2xl">
+                            {skill.skillName}
+                          </div>
+                          {skill.listItems.map((item, i) => {
+                            return (
+                              <p key={i} className="text-md">
+                                {item}
+                              </p>
+                            );
+                          })}
                         </div>
-                        {skill.listItems.map((item, i) => {
-                          return (
-                            <p key={i} className="text-md">
-                              {item}
-                            </p>
-                          );
-                        })}
                       </div>
                     </div>
                   );
