@@ -90,6 +90,32 @@ const skills = [
   },
 ];
 
+const experiences = [
+  {
+    titleLine: 'Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present',
+    description: `
+          Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
+          Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
+          Participated in code reviews and quality assurance processes to ensure code integrity and performance.
+    `,
+    technologies: [
+      "HTML/CSS",
+      "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
+      "TypeScript (Next.js, TSX, Angular)",
+    ],
+  },
+];
+
+const projects = [
+  {
+    name: 'My Project',
+    description: `
+          This is a description of the project.
+    `,
+    image: "image"
+  },
+];
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-sans">
@@ -217,22 +243,104 @@ export default function Home() {
       </section>
       <section id="experience-section" className="min-h-screen">
         <div className="custom-max-width">
-          ## Experience:
+          <div id="experience-container" className="flex flex-col py-32">
+            <div className="text-4xl text-center">
+              <h2 className="mb-1">
+                Experience:
+              </h2>
+            </div>
+            {/* <div className="text-xl text-center">
+            <p>
+              A tagline or something?
+              </p>
+            </div> */}
+            <div>
+              {/* Skills scroller */}
+              <div className="py-4 flex flex-col justify-between lg:flex-row">
+                {experiences.map((experience, i) => {
+                  return (
+                    <div key={i} className="py-2 flex">
+                      <div className="rounded-lg shadow-lg bg-white">
+                        <div className="p-4">
+                          <div className="flex flex-col lg:flex-row">
+                            <div className="p-1 text-md basis-1/3">
+                              {experience.technologies}
+                            </div>
+                            <div className="p-1 basis-2/3">
+                              <div className="text-2xl mb-2">
+                                {experience.titleLine}
+                              </div>
+                              <div className="text-lg">
+                                {experience.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          {/* ## Experience:
           Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
 
           Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
           Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
-          Participated in code reviews and quality assurance processes to ensure code integrity and performance.
+          Participated in code reviews and quality assurance processes to ensure code integrity and performance. */}
         </div>
       </section>
       <section id="project-section" className="min-h-screen">
         <div className="custom-max-width">
-          ## Projects:
+          <div id="project-container" className="flex flex-col py-32">
+            <div className="text-4xl">
+              <h2 className="mb-1">
+                Projects:
+              </h2>
+            </div>
+            <div className="text-xl">
+              <p>
+                Take a look at some of these projects:
+              </p>
+            </div>
+            <div>
+              <div className="py-4 flex flex-col justify-between lg:flex-row">
+                {projects.map((project, i) => {
+                  return (
+                    <div key={i} className="py-2 flex">
+                      <div className="">
+                        <div className="">
+                          <div className="flex flex-col lg:flex-row">
+                            <div className="text-md grow-1/3 rounded-lg shadow-lg bg-white flex">
+                              <div className="bg-red-500 w-2 h-full rounded-l-lg"></div>
+                              <div className="p-2 flex flex-col">
+                                <div className="text-2xl mb-2">
+                                  {project.name}
+                                </div>
+                                <div className="text-lg">
+                                  {project.description}
+                                </div>
+                              </div>
+                            </div>
+                            <div className="p-1 grow-2/3">
+                              {project.image}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          {/* ## Projects:
           Resume Site
 
           Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
           Implemented a Docker container and deployed to !!! to allow multi-region availability.
-          Added !!! analytics to track some basic information about users.
+          Added !!! analytics to track some basic information about users. */}
         </div>
       </section>
       <section id="certification-section" className="min-h-screen">
