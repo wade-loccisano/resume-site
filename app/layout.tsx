@@ -22,7 +22,8 @@ export default function RootLayout({
         {/* <header>The header</header> */}
         <Header />
         {children}
-        <footer>The footer</footer>
+        {/* <footer>The footer</footer> */}
+        <Footer />
       </body>
     </html>
   );
@@ -62,5 +63,57 @@ export function Header() {
         </div>
       </section>
     </header>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="w-full">
+      <section id="footer-section" className="bg-white min-h-[60px]">
+        <div className="flex flex-row justify-center">
+          <div className="text-xl p-4">
+            Wade Loccisano
+          </div>
+          <div className="text-lg p-4">
+            About Me
+          </div>
+          <div className="text-lg p-4">
+            About this Site
+          </div>
+          <div className="text-lg p-4">
+            Apps
+          </div>
+          <div className="text-lg p-4">
+            Contact
+          </div>
+        </div>
+        <div className="border-t-2 border-slate-200 w-[98%] mx-auto my-0">
+        </div>
+        <div className="flex flex-row justify-evenly">
+          <div className="flex">
+            <div className="text-xl p-4">
+              {/* Language Select */}
+            </div>
+            <div className="text-md p-4">
+              Privacy Policy
+            </div>
+            <div className="text-md p-4">
+              Terms
+            </div>
+            <div className="text-md p-4">
+              Copyright &copy; 2024 Wade Loccisano
+            </div>
+          </div>
+          <div className="flex">
+            <div className="text-md p-4">
+              Github Icon
+            </div>
+            <div className="text-md p-4">
+              LinkedIn Icon
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
   );
 }

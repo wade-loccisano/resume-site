@@ -110,9 +110,56 @@ const projects = [
   {
     name: 'My Project',
     description: `
-          This is a description of the project.
+          This is a description of the project. Let us
+          talk about what we did, what we are doing,
+          and what we plan on doing.
     `,
     image: "image"
+  },
+  {
+    name: 'Project 2',
+    description: `
+          This is a description of the project. Let us
+          talk about what we did, what we are doing,
+          and what we plan on doing.
+    `,
+    image: "image"
+  },
+  {
+    name: 'Project 3',
+    description: `
+          This is a description of the project. Let us
+          talk about what we did, what we are doing,
+          and what we plan on doing.
+    `,
+    image: "image"
+  },
+];
+
+const certifications = [
+  {
+    name: 'AWS Certified Cloud Practitioner',
+    description: `
+          This is a description of the certifications. Let us
+          talk about what we did, what we are doing,
+          and what we plan on doing.
+    `,
+  },
+  {
+    name: 'Tech Elevator',
+    description: `
+          This is a description of the project. Let us
+          talk about what we did, what we are doing,
+          and what we plan on doing.
+    `,
+  },
+  {
+    name: 'Tech Elevator',
+    description: `
+          This is a description of the project. Let us
+          talk about what we did, what we are doing,
+          and what we plan on doing.
+    `,
   },
 ];
 
@@ -148,10 +195,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="skills-section" className="min-h-screen flex justify-center min-w-[100%]">
+      <section id="skills-section" className=" flex justify-center min-w-[100%]">
         {/* <div className="max-w-[1200px]"> */}
         <div className="custom-max-width">
-          <div id="skills-container" className="flex flex-col py-32">
+          <div id="skills-container" className="flex flex-col py-28">
             <div>
               Skills
             </div>
@@ -241,7 +288,7 @@ export default function Home() {
             </div>
           </div> */}
       </section>
-      <section id="experience-section" className="min-h-screen">
+      <section id="experience-section" >
         <div className="custom-max-width">
           <div id="experience-container" className="flex flex-col py-32">
             <div className="text-4xl text-center">
@@ -291,7 +338,7 @@ export default function Home() {
           Participated in code reviews and quality assurance processes to ensure code integrity and performance. */}
         </div>
       </section>
-      <section id="project-section" className="min-h-screen">
+      <section id="project-section">
         <div className="custom-max-width">
           <div id="project-container" className="flex flex-col py-32">
             <div className="text-4xl">
@@ -304,34 +351,28 @@ export default function Home() {
                 Take a look at some of these projects:
               </p>
             </div>
-            <div>
-              <div className="py-4 flex flex-col justify-between lg:flex-row">
+            <div className="flex py-4">
+              <div className="flex flex-col basis-1/3">
                 {projects.map((project, i) => {
                   return (
-                    <div key={i} className="py-2 flex">
-                      <div className="">
-                        <div className="">
-                          <div className="flex flex-col lg:flex-row">
-                            <div className="text-md grow-1/3 rounded-lg shadow-lg bg-white flex">
-                              <div className="bg-red-500 w-2 h-full rounded-l-lg"></div>
-                              <div className="p-2 flex flex-col">
-                                <div className="text-2xl mb-2">
-                                  {project.name}
-                                </div>
-                                <div className="text-lg">
-                                  {project.description}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="p-1 grow-2/3">
-                              {project.image}
-                            </div>
+                    <div key={i} className="py-2">
+                      <div className="text-md rounded-lg shadow-lg bg-white flex">
+                        <div className="bg-red-500 w-4 rounded-l-lg"></div>
+                        <div className="p-2 flex flex-col">
+                          <div className="text-2xl mb-2">
+                            {project.name}
+                          </div>
+                          <div className="text-lg">
+                            {project.description}
                           </div>
                         </div>
                       </div>
                     </div>
                   );
                 })}
+              </div>
+              <div className="pl-4 pt-2 basis-2/3">
+                <div className="bg-white h-full"></div>
               </div>
             </div>
           </div>
@@ -343,22 +384,54 @@ export default function Home() {
           Added !!! analytics to track some basic information about users. */}
         </div>
       </section>
-      <section id="certification-section" className="min-h-screen">
+      <section id="certification-section">
         <div className="custom-max-width">
-          ## Certifications:
+          <div id="certification-container" className="flex flex-col py-32">
+            <div className="text-4xl">
+              <h2 className="mb-1">
+                Certifications:
+              </h2>
+            </div>
+            <div className="text-xl">
+              <p>
+                Some of my certifications and credentials.
+              </p>
+            </div>
+            <div className="py-4">
+              <div className="grid gap-8 grid-cols-3">
+                {certifications.map((project, i) => {
+                  return (
+                    <div key={i} className="">
+                      <div className="text-md rounded-lg shadow-lg bg-white">
+                        <div className="p-2 flex flex-col">
+                          <div className="text-2xl mb-2">
+                            {project.name}
+                          </div>
+                          <div className="text-lg">
+                            {project.description}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          {/* ## Certifications:
           AWS Certified Cloud Practitioner
 
           ### Education:
           Web Application Development Bootcamp
           Tech Elevator, City, State
-          Graduated: February 2021
+          Graduated: February 2021 */}
         </div>
       </section>
-      <section id="reference-section" className="min-h-screen">
-        {/* ### Testimonials */}
+      {/* <section id="reference-section">
+        ### Testimonials
         ### References:
         Available upon request.
-      </section>
+      </section> */}
     </main >
   );
 }
