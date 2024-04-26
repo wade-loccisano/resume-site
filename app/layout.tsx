@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +35,7 @@ export function Header() {
   return (
     // <header className="text-center">
     <header className="fixed w-full">
-      <section id="header-section" className="bg-white min-h-[60px]">
+      <section id="header-section" className="bg-white min-h-[60px] shadow-lg">
         <div className="flex flex-row justify-between px-[20rem]">
           <div className="p-2 text-xl">
             Wade Loccisano
@@ -74,6 +76,7 @@ export function Footer() {
           <div className="text-xl p-4">
             Wade Loccisano
           </div>
+
           <div className="text-lg p-4">
             About Me
           </div>
@@ -86,6 +89,28 @@ export function Footer() {
           <div className="text-lg p-4">
             Contact
           </div>
+
+          {/* <Link href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
+            <div className="text-lg p-4">
+              About Me
+            </div>
+          </Link>
+          <Link href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
+            <div className="text-lg p-4">
+              About this Site
+            </div>
+          </Link>
+          <Link href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
+            <div className="text-lg p-4">
+              Apps
+            </div>
+          </Link>
+          <Link href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
+            <div className="text-lg p-4">
+              Contact
+            </div>
+          </Link> */}
+
         </div>
         <div className="border-t-2 border-slate-200 w-[98%] mx-auto my-0">
         </div>
@@ -94,23 +119,37 @@ export function Footer() {
             <div className="text-xl p-4">
               {/* Language Select */}
             </div>
-            <div className="text-md p-4">
-              Privacy Policy
-            </div>
-            <div className="text-md p-4">
-              Terms
-            </div>
+            <Link href="/privacy" target="_blank">
+              <div className="text-md p-4">
+                Privacy Policy
+              </div>
+            </Link>
+            <Link href="/terms" target="_blank">
+              <div className="text-md p-4">
+                Terms
+              </div>
+            </Link>
             <div className="text-md p-4">
               Copyright &copy; 2024 Wade Loccisano
             </div>
           </div>
           <div className="flex">
-            <div className="text-md p-4">
-              Github Icon
-            </div>
-            <div className="text-md p-4">
-              LinkedIn Icon
-            </div>
+            <Link className="px-2 py-4" href="https://github.com/wade-loccisano" target="_blank">
+              <Image
+                src="/github-logo.svg"
+                alt="Image of the GitHub Logo"
+                width={24}
+                height={24}
+              />
+            </Link>
+            <Link className="px-2 py-4" href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
+              <Image
+                src="/linkedin-logo.svg"
+                alt="Image of the LinkedIn Logo"
+                width={24}
+                height={24}
+              />
+            </Link>
           </div>
         </div>
       </section>
