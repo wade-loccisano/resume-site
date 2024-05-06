@@ -165,7 +165,7 @@ const certifications = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between font-sans">
+    <main className="flex min-h-screen flex-col items-center justify-between font-sans pt-[60px]">
       <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
         {/* Splash Screen */}
         <div id="splash-section">
