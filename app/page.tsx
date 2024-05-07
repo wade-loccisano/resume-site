@@ -98,11 +98,33 @@ const experiences = [
           Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
           Participated in code reviews and quality assurance processes to ensure code integrity and performance.
     `,
-    technologies: [
-      "HTML/CSS",
-      "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
-      "TypeScript (Next.js, TSX, Angular)",
-    ],
+    technologies: {
+      // front-end
+      frontEnd: [
+        "HTML/CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Angular",
+        "Node",
+        "Next.js",
+      ],
+      backEnd: [
+        "C#",
+        "SQL",
+        "Entity Framework"
+      ],
+      devops: [
+        "AWS",
+        "Docker",
+        "Terraform",
+      ],
+
+
+      // "HTML/CSS",
+      // "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
+      // "TypeScript (Next.js, TSX, Angular)",
+    },
   },
 ];
 
@@ -302,7 +324,6 @@ export default function Home() {
               </p>
             </div> */}
             <div>
-              {/* Skills scroller */}
               <div className="py-4 flex flex-col justify-between lg:flex-row">
                 {experiences.map((experience, i) => {
                   return (
@@ -310,9 +331,53 @@ export default function Home() {
                       <div className="rounded-lg shadow-lg bg-white">
                         <div className="p-4">
                           <div className="flex flex-col lg:flex-row">
+
                             <div className="p-1 text-md basis-1/3">
-                              {experience.technologies}
+                              {/* {experience.technologies.map((technology) => {
+                                  return (
+                                    <div className="m-1 px-2 border border-black rounded-full">
+                                      {technology}
+                                    </div>
+                                  );
+                                })} */}
+                              <div className="text-sm text-slate-400">Front-end</div>
+                              <div className="flex flex-wrap">
+                                {experience.technologies.frontEnd.map((technology) => {
+                                  return (
+                                    <>
+                                      <div className="m-1 px-2 border border-black rounded-full">
+                                        {technology}
+                                      </div>
+                                    </>
+                                  );
+                                })}
+                              </div>
+                              <div className="text-sm text-slate-400">Backend</div>
+                              <div className="flex flex-wrap">
+                                {experience.technologies.backEnd.map((technology) => {
+                                  return (
+                                    <>
+                                      <div className="m-1 px-2 border border-black rounded-full">
+                                        {technology}
+                                      </div>
+                                    </>
+                                  );
+                                })}
+                              </div>
+                              <div className="text-sm text-slate-400">DevOps</div>
+                              <div className="flex flex-wrap">
+                                {experience.technologies.devops.map((technology) => {
+                                  return (
+                                    <>
+                                      <div className="m-1 px-2 border border-black rounded-full">
+                                        {technology}
+                                      </div>
+                                    </>
+                                  );
+                                })}
+                              </div>
                             </div>
+
                             <div className="p-1 basis-2/3">
                               <div className="text-2xl mb-2">
                                 {experience.titleLine}

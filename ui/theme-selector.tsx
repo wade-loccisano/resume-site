@@ -8,25 +8,31 @@ export default function ThemeSelector() {
   ];
   const [open, setOpen] = React.useState(false);
 
-  const openThemeSelect = (open) => {
+  const openThemeSelect = (open: boolean) => {
     setOpen(open);
     console.log('clicked ', open);
   }
   return (
-    <button
-      className="relative text-center"
-      onClick={() => openThemeSelect(!open)}
-    >
-      <div className="min-w-[90px]">
+    <div className='flex flex-col'>
+      <button
+        className="text-center min-w-[90px]"
+        onClick={() => openThemeSelect(!open)}
+      >
         Theme
+      </button>
+      <div className="">
+        {open && (
+          <div className="fixed inset-x-0 inset-y-0 flex flex-col z-10 shadow-md rounded-md bg-white">
+            <div className="px-4 py-2">
+              <div className="">
+                Light
+              </div>
+            </div>
+            <div className="px-4 py-2">Dark</div>
+            {/* <a href="#" className="block px-4 py-2 text-gray-200 hover:bg-gray-200">System</a> */}
+          </div>
+        )}
       </div>
-      {open && (
-        <div className="flex flex-col absolute  left-0 right-0 z-10 mt-2 shadow-md rounded-md py-2">
-          <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Light</a>
-          <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Dark</a>
-          <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">System</a>
-        </div>
-      )}
-    </button>
+    </div>
   );
 }
