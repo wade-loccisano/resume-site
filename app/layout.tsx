@@ -91,7 +91,7 @@ export function Footer() {
             <div className="text-lg px-8 py-6">
               About Me
               <div className="text-xs py-2">
-                Learn about the site's creator.
+                Learn about the site&apos;s creator.
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ export function Footer() {
             <div className="text-lg px-8 py-6">
               About this Site
               <div className="text-xs py-2">
-                A bit about what's behind this site.
+                A bit about what&apos;s behind this site.
               </div>
             </div>
           </div>

@@ -201,7 +201,7 @@ export default function Home() {
                 </div>
                 <div className="text-xl mb-6">
                   {/* tagline */}
-                  Building Tomorrow's Solutions...
+                  Building Tomorrow&apos;s Solutions...
                   <br />
                   Today, Your Full Stack Partner.
                 </div>
