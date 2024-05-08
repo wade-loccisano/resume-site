@@ -81,13 +81,13 @@ const skills = [
       "Version Control and CI/CD (Git, Docker)",
     ],
   },
-  {
-    skillName: 'Agile',
-    listItems: [
-      "Experienced with Agile development methodologies",
-      "Excellent problem-solving and analytical skills",
-    ],
-  },
+  // {
+  //   skillName: 'Agile',
+  //   listItems: [
+  //     "Experienced with Agile development methodologies",
+  //     "Excellent problem-solving and analytical skills",
+  //   ],
+  // },
 ];
 
 const experiences = [
@@ -162,25 +162,27 @@ const certifications = [
   {
     name: 'AWS Certified Cloud Practitioner',
     description: `
-          This is a description of the certifications. Let us
-          talk about what we did, what we are doing,
-          and what we plan on doing.
+      Gained foundational knowledge of cloud concepts, 
+      AWS services, security, architecture, pricing, and 
+      support to aid in leveraging cloud technologies 
+      to optimize business solutions and enhance scalability.
     `,
   },
   {
-    name: 'Tech Elevator',
+    name: 'Tech Elevator Coding Bootcamp',
     description: `
-          This is a description of the project. Let us
-          talk about what we did, what we are doing,
-          and what we plan on doing.
+      Attended a 14-week coding bootcamp learning how to 
+      develop dynamic web-based software systems using the 
+      Java programming language.
     `,
   },
   {
-    name: 'Tech Elevator',
+    name: 'B.A. Economics',
     description: `
-          This is a description of the project. Let us
-          talk about what we did, what we are doing,
-          and what we plan on doing.
+      Obtained BA in Economics, mastering analytical skills 
+      and understanding economic principles. Proficient in 
+      applying economic theories to solve real-world 
+      problems and make informed business decisions.
     `,
   },
 ];
@@ -192,20 +194,22 @@ export default function Home() {
         {/* Splash Screen */}
         <div id="splash-section">
           <div className="custom-max-width">
-            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32">
+            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
               <div id="left" className="flex-1 lg:flex-1/2">
                 <div className="text-5xl mb-2">
                   # Wade Loccisano
                 </div>
                 <div className="text-xl mb-6">
                   {/* tagline */}
-                  Hello, my name is Wade Loccisano!
+                  Building Tomorrow's Solutions...
+                  <br />
+                  Today, Your Full Stack Partner.
                 </div>
-                <button className="border border-black p-2">
+                {/* <button className="border border-black p-2">
                   Contact
-                </button>
+                </button> */}
               </div>
-              <div id="right" className="flex-1 lg:flex-1/2">
+              <div id="right" className="flex-1 lg:flex-1/2 bg-gray-900 p-4 font-['monospace'] border border-gray-400 text-left">
                 <div className="text-xl">
                   ## About:
                 </div>
@@ -217,25 +221,25 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="skills-section" className=" flex justify-center min-w-[100%]">
+      <section id="skills-section" className="flex justify-center min-w-[100%]">
         {/* <div className="max-w-[1200px]"> */}
         <div className="custom-max-width">
           <div id="skills-container" className="flex flex-col py-28">
             <div>
               Skills
             </div>
-            <div className="text-4xl">
+            <div className="text-2xl md:text-4xl">
               Programming Languages and Frameworks:
             </div>
             <div>
               {/* Skills scroller */}
-              <div className="py-4 flex flex-col justify-between lg:flex-row">
+              <div className="py-4 flex flex-col justify-between md:flex-row flex-wrap">
                 {skills.map((skill, i) => {
                   return (
-                    <div key={i} className="py-2 flex">
-                      <div className="w-[244px] rounded-lg shadow-lg">
-                        <div className="bg-cover bg-red-200 h-8 sm:h-12"></div>
-                        <div className="p-2">
+                    <div key={i} className="md:w-[310px] flex pb-8">
+                      <div className="rounded-lg shadow-lg bg-white">
+                        <div className="bg-gradient-to-r from-[#B89527] via-[#D4AF37] to-[#E5C845] bg-cover h-8 sm:h-12"></div>
+                        <div className="px-8 py-4">
                           <div className="text-2xl">
                             {skill.skillName}
                           </div>
@@ -261,14 +265,14 @@ export default function Home() {
                   </div>
                 </div> */}
               </div>
-              <div className="flex">
+              {/* <div className="flex">
                 <button>
                   Scroll Left
                 </button>
                 <button>
                   Scroll Right
                 </button>
-              </div>
+              </div> */}
             </div>
             {/* <div>
               Proficient in programming languages: JavaScript, TypeScript, C#, Python
@@ -312,7 +316,7 @@ export default function Home() {
       </section>
       <section id="experience-section" >
         <div className="custom-max-width">
-          <div id="experience-container" className="flex flex-col py-32">
+          <div id="experience-container" className="flex flex-col py-16">
             <div className="text-4xl text-center">
               <h2 className="mb-1">
                 Experience:
@@ -405,7 +409,7 @@ export default function Home() {
       </section>
       <section id="project-section">
         <div className="custom-max-width">
-          <div id="project-container" className="flex flex-col py-32">
+          <div id="project-container" className="flex flex-col py-24">
             <div className="text-4xl">
               <h2 className="mb-1">
                 Projects:
@@ -416,11 +420,11 @@ export default function Home() {
                 Take a look at some of these projects:
               </p>
             </div>
-            <div className="flex py-4">
-              <div className="flex flex-col basis-1/3">
+            <div className="flex py-4 flex-col-reverse lg:flex-row">
+              <div className="flex flex-col lg:basis-1/3">
                 {projects.map((project, i) => {
                   return (
-                    <div key={i} className="py-2">
+                    <div key={i} className="py-2 hover:cursor-pointer">
                       <div className="text-md rounded-lg shadow-lg bg-white flex">
                         <div className="bg-red-500 w-4 rounded-l-lg"></div>
                         <div className="p-2 flex flex-col">
@@ -436,8 +440,16 @@ export default function Home() {
                   );
                 })}
               </div>
-              <div className="pl-4 pt-2 basis-2/3">
-                <div className="bg-white h-full"></div>
+              <div className="px-0 py-2 lg:px-2 lg:basis-2/3 -z-10">
+                <div className="relative p-2 bg-white rounded-lg shadow-lg h-[300px] lg:h-full">
+                  <Image
+                    src="/linkedin-logo.svg"
+                    alt="Image of the LinkedIn Logo"
+                    fill
+                    className=""
+                  />
+                </div>
+                {/* <div className="bg-white h-full"></div> */}
               </div>
             </div>
           </div>
