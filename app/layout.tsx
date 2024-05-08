@@ -41,7 +41,7 @@ export function Header() {
           <Link
             href="/"
           >
-            <div className="p-2 text-xl">
+            <div className="p-3 text-xl">
               Wade Loccisano
             </div>
           </Link>
@@ -69,9 +69,9 @@ export function Header() {
                 Theme
               </div>
             </button> */}
-            <div className="min-w-[90px]">
+            {/* <div className="min-w-[90px]">
               Contact
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

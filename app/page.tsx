@@ -192,20 +192,22 @@ export default function Home() {
         {/* Splash Screen */}
         <div id="splash-section">
           <div className="custom-max-width">
-            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32">
+            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center">
               <div id="left" className="flex-1 lg:flex-1/2">
                 <div className="text-5xl mb-2">
                   # Wade Loccisano
                 </div>
                 <div className="text-xl mb-6">
                   {/* tagline */}
-                  Hello, my name is Wade Loccisano!
+                  Building Tomorrow's Solutions...
+                  <br />
+                  Today, Your Full Stack Partner.
                 </div>
-                <button className="border border-black p-2">
+                {/* <button className="border border-black p-2">
                   Contact
-                </button>
+                </button> */}
               </div>
-              <div id="right" className="flex-1 lg:flex-1/2">
+              <div id="right" className="flex-1 lg:flex-1/2 bg-gray-900 p-4 font-family:monospace border border-gray-400 text-left">
                 <div className="text-xl">
                   ## About:
                 </div>
