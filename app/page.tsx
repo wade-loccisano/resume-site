@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectExplorer } from "@/app/ui/project-explorer";
 
 const resumeTemplate: string = `
   # Wade Loccisano
@@ -130,7 +130,7 @@ const experiences = [
 
 const projects = [
   {
-    name: 'My Project',
+    name: 'Project 1',
     description: `
           This is a description of the project. Let us
           talk about what we did, what we are doing,
@@ -189,7 +189,7 @@ const certifications = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between font-sans pt-[60px]">
+    <main className="flex min-h-screen flex-col items-center justify-between font-sans pt-[56px]">
       <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
         {/* Splash Screen */}
         <div id="splash-section">
@@ -420,7 +420,13 @@ export default function Home() {
                 Take a look at some of these projects:
               </p>
             </div>
-            <div className="flex py-4 flex-col-reverse lg:flex-row">
+
+            {projects ? (
+              <ProjectExplorer projects={projects} />
+            ) : null}
+
+            {/* Begin Project Explorer */}
+            {/* <div className="flex py-4 flex-col-reverse lg:flex-row">
               <div className="flex flex-col lg:basis-1/3">
                 {projects.map((project, i) => {
                   return (
@@ -449,9 +455,10 @@ export default function Home() {
                     className=""
                   />
                 </div>
-                {/* <div className="bg-white h-full"></div> */}
               </div>
-            </div>
+            </div> */}
+            {/* End Project Explorer */}
+
           </div>
           {/* ## Projects:
           Resume Site
