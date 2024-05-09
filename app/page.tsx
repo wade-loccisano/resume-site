@@ -1,5 +1,4 @@
-import { ProjectExplorer } from "@/ui/project-explorer";
-import Image from "next/image";
+import { ProjectExplorer } from "@/app/ui/project-explorer";
 
 const resumeTemplate: string = `
   # Wade Loccisano
@@ -131,7 +130,7 @@ const experiences = [
 
 const projects = [
   {
-    name: 'My Project',
+    name: 'Project 1',
     description: `
           This is a description of the project. Let us
           talk about what we did, what we are doing,
@@ -190,7 +189,7 @@ const certifications = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between font-sans pt-[60px]">
+    <main className="flex min-h-screen flex-col items-center justify-between font-sans pt-[56px]">
       <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
         {/* Splash Screen */}
         <div id="splash-section">
