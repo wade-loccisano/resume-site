@@ -1,3 +1,4 @@
+import { ProjectExplorer } from "@/ui/project-explorer";
 import Image from "next/image";
 
 const resumeTemplate: string = `
@@ -420,7 +421,13 @@ export default function Home() {
                 Take a look at some of these projects:
               </p>
             </div>
-            <div className="flex py-4 flex-col-reverse lg:flex-row">
+
+            {projects ? (
+              <ProjectExplorer projects={projects} />
+            ) : null}
+
+            {/* Begin Project Explorer */}
+            {/* <div className="flex py-4 flex-col-reverse lg:flex-row">
               <div className="flex flex-col lg:basis-1/3">
                 {projects.map((project, i) => {
                   return (
@@ -449,9 +456,10 @@ export default function Home() {
                     className=""
                   />
                 </div>
-                {/* <div className="bg-white h-full"></div> */}
               </div>
-            </div>
+            </div> */}
+            {/* End Project Explorer */}
+
           </div>
           {/* ## Projects:
           Resume Site
