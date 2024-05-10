@@ -6,7 +6,7 @@ import Image from "next/image";
 export const Footer = () => {
   return (
     <footer>
-      <section id="footer-section" className="bg-emerald-800 min-h-[60px] text-white px-20 py-10 lg:p-0">
+      <section id="footer-section" className="bg-emerald-800 min-h-[60px] text-white sm:px-24 py-10 lg:p-0">
         <div className="flex flex-col lg:flex-row justify-center">
           <div className="text-xl p-4 flex items-center">
             Wade Loccisano
@@ -80,7 +80,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col lg:flex-row justify-center">
           <div className="lg:flex lg:justify-between">
-            <div className="flex flex-col lg:flex-row">
+            <div className="px-2 lg:px-0 flex flex-col lg:flex-row">
               <div className="text-xl p-4">
                 {/* Language Select */}
               </div>

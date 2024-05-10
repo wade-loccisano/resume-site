@@ -35,7 +35,7 @@ export const ProjectExplorer = ({
           );
         })}
       </div>
-      <div className="px-0 py-2 lg:px-2 lg:basis-2/3 -z-10">
+      <div className="px-0 py-2 lg:px-2 lg:basis-2/3">
         <div className="relative p-2 bg-white rounded-lg shadow-lg h-[300px] lg:h-full">
           {selectedProject === 0 ? <Image
             src={linkedinLogo}
