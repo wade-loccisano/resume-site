@@ -92,7 +92,7 @@ const skills = [
 
 const experiences = [
   {
-    titleLine: 'Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present',
+    titleLine: 'Full Stack Software Developer | MadeLabs LLC. | April 2021 - April 2024',
     description: `
           Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
           Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
@@ -210,9 +210,9 @@ export default function Home() {
                 </button> */}
               </div>
               <div id="right" className="flex-1 lg:flex-1/2 bg-gray-900 p-4 font-['monospace'] border border-gray-400 text-left">
-                <div className="text-xl">
+                {/* <div className="text-xl">
                   About:
-                </div>
+                </div> */}
                 <div className="text-lg">
                   Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
                 </div>
@@ -222,9 +222,8 @@ export default function Home() {
         </div>
       </section>
       <section id="skills-section" className="flex justify-center min-w-[100%]">
-        {/* <div className="max-w-[1200px]"> */}
         <div className="custom-max-width">
-          <div id="skills-container" className="flex flex-col py-28">
+          <div id="skills-container" className="px-2 sm:px-0 flex flex-col py-28">
             <div>
               Skills
             </div>
@@ -314,9 +313,9 @@ export default function Home() {
             </div>
           </div> */}
       </section>
-      <section id="experience-section" >
+      <section id="experience-section" className="bg-gradient-to-b from-gray-200 via-emerald-700/50 to-emerald-900 bg-cover min-w-[100%]">
         <div className="custom-max-width">
-          <div id="experience-container" className="flex flex-col py-16">
+          <div id="experience-container" className="px-4 sm:px-0 flex flex-col py-16">
             <div className="text-4xl text-center">
               <h2 className="mb-1">
                 Experience:
@@ -407,9 +406,9 @@ export default function Home() {
           Participated in code reviews and quality assurance processes to ensure code integrity and performance. */}
         </div>
       </section>
-      <section id="project-section">
+      <section id="project-section" className="">
         <div className="custom-max-width">
-          <div id="project-container" className="flex flex-col py-24">
+          <div id="project-container" className="px-4 sm:px-0 flex flex-col py-24">
             <div className="text-4xl">
               <h2 className="mb-1">
                 Projects:
@@ -422,7 +421,9 @@ export default function Home() {
             </div>
 
             {projects ? (
-              <ProjectExplorer projects={projects} />
+              <div className="bg-gray-200">
+                <ProjectExplorer projects={projects} />
+              </div>
             ) : null}
 
             {/* Begin Project Explorer */}
@@ -470,7 +471,7 @@ export default function Home() {
       </section>
       <section id="certification-section">
         <div className="custom-max-width">
-          <div id="certification-container" className="flex flex-col py-32">
+          <div id="certification-container" className="px-4 sm:px-0 flex flex-col py-32">
             <div className="text-4xl">
               <h2 className="mb-1">
                 Certifications:

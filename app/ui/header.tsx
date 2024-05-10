@@ -4,7 +4,7 @@ import ThemeSelector from "./theme-selector";
 export const Header = () => {
   return (
     <header>
-      <section id="header-section" className="w-full fixed bg-white shadow-lg">
+      <section id="header-section" className="w-full fixed bg-white shadow-lg z-50">
         <div className="flex flex-row justify-evenly">
           <Link
             href="/"
