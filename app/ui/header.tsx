@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header>
       <section id="header-section" className="w-full fixed bg-white shadow-lg">
-        <div className="flex flex-row justify-between px-[20rem]">
+        <div className="flex flex-row justify-evenly">
           <Link
             href="/"
           >
