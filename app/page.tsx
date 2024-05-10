@@ -197,7 +197,7 @@ export default function Home() {
             <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
               <div id="left" className="flex-1 lg:flex-1/2">
                 <div className="text-5xl mb-2">
-                  # Wade Loccisano
+                  Wade Loccisano
                 </div>
                 <div className="text-xl mb-6">
                   {/* tagline */}
@@ -211,7 +211,7 @@ export default function Home() {
               </div>
               <div id="right" className="flex-1 lg:flex-1/2 bg-gray-900 p-4 font-['monospace'] border border-gray-400 text-left">
                 <div className="text-xl">
-                  ## About:
+                  About:
                 </div>
                 <div className="text-lg">
                   Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
@@ -482,7 +482,7 @@ export default function Home() {
               </p>
             </div>
             <div className="py-4">
-              <div className="grid gap-8 grid-cols-3">
+              <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
                 {certifications.map((project, i) => {
                   return (
                     <div key={i} className="">

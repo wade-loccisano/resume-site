@@ -2,6 +2,9 @@
 
 import React from 'react';
 import Image from "next/image";
+import linkedinLogo from './linkedin-logo.svg';
+import githubLogo from './github-logo.svg';
+import dbeaverLogo from './dbeaver-logo.svg';
 
 export const ProjectExplorer = ({
   projects: projectsList,
@@ -35,19 +38,19 @@ export const ProjectExplorer = ({
       <div className="px-0 py-2 lg:px-2 lg:basis-2/3 -z-10">
         <div className="relative p-2 bg-white rounded-lg shadow-lg h-[300px] lg:h-full">
           {selectedProject === 0 ? <Image
-            src="/linkedin-logo.svg"
+            src={linkedinLogo}
             alt="Image of the LinkedIn Logo"
             fill
             className=""
           /> :
             selectedProject === 1 ? <Image
-              src="/github-logo.svg"
+              src={githubLogo}
               alt="Image of the GitHub Logo"
               fill
               className=""
             /> :
               <Image
-                src="/dbeaver-logo.svg"
+                src={dbeaverLogo}
                 alt="Image of the DBeaver Logo"
                 fill
                 className=""
