@@ -99,7 +99,6 @@ const experiences = [
           Participated in code reviews and quality assurance processes to ensure code integrity and performance.
     `,
     technologies: {
-      // front-end
       frontEnd: [
         "HTML/CSS",
         "JavaScript",
@@ -119,11 +118,6 @@ const experiences = [
         "Docker",
         "Terraform",
       ],
-
-
-      // "HTML/CSS",
-      // "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
-      // "TypeScript (Next.js, TSX, Angular)",
     },
   },
 ];
