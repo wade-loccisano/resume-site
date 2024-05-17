@@ -15,11 +15,11 @@ export const ProjectExplorer = ({
   const [selectedProject, setSelectedProject] = React.useState(0);
 
   return (
-    <div className="flex py-4 flex-col-reverse lg:flex-row">
+    <div className="flex flex-col-reverse lg:flex-row">
       <div className="flex flex-col lg:basis-1/3">
         {projects.map((project, i) => {
           return (
-            <div key={i} className="py-2 hover:cursor-pointer" onClick={() => setSelectedProject(i)}>
+            <div key={i} className="pl-2 py-2 hover:cursor-pointer" onClick={() => setSelectedProject(i)}>
               <div className={`text-md rounded-lg flex ${selectedProject === i ? 'shadow-lg bg-white' : ''}`}>
                 <div className={`w-4 rounded-l-lg ${selectedProject === i ? 'shadow-lg bg-red-500' : ''}`}></div>
                 <div className="p-2 flex flex-col">

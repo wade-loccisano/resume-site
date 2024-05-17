@@ -49,18 +49,16 @@ export const Footer = () => {
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
           </div>
-          <div className="flex flex-col items-left">
-            {/* <Link href="/" target="_blank"> */}
+          {/* <div className="flex flex-col items-left">
             <div className="text-lg px-8 py-2 lg:py-6">
               Contact
               <div className="text-xs py-2">
                 Feel free to reach out.
               </div>
             </div>
-            {/* </Link> */}
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
-          </div>
+          </div> */}
 
           {/* <Link href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
             <div className="text-lg p-4">

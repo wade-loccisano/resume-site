@@ -15,8 +15,9 @@ export default function ThemeSelector() {
   return (
     <div className="relative flex flex-col">
       <button
-        className="text-center min-w-[90px]"
+        className="text-center min-w-[90px] text-gray-400"
         onClick={() => openThemeSelect(!open)}
+        disabled
       >
         Theme
       </button>

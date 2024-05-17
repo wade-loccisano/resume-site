@@ -92,6 +92,9 @@ const skills = [
 
 const experiences = [
   {
+    position: 'Full Stack Software Developer',
+    org: 'MadeLabs LLC.',
+    dates: 'April 2021 - April 2024',
     titleLine: 'Full Stack Software Developer | MadeLabs LLC. | April 2021 - April 2024',
     description: `
           Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
@@ -379,6 +382,16 @@ export default function Home() {
                               <div className="text-2xl mb-2">
                                 {experience.titleLine}
                               </div>
+
+                              {/* <div className="text-2xl mb-2">
+                                {experience.position}
+                              </div>
+                              <div className="text-2xl mb-2">
+                                {experience.org}
+                              </div>
+                              <div className="text-2xl mb-2">
+                                {experience.dates}
+                              </div> */}
                               <div className="text-lg">
                                 {experience.description}
                               </div>
@@ -415,7 +428,7 @@ export default function Home() {
             </div>
 
             {projects ? (
-              <div className="bg-gray-200">
+              <div className="bg-gray-200 rounded-md">
                 <ProjectExplorer projects={projects} />
               </div>
             ) : null}
