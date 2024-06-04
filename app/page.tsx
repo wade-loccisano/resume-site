@@ -1,4 +1,5 @@
 import { ProjectExplorer } from "@/app/ui/project-explorer";
+import { SkillsCards } from "./ui/skills-cards";
 
 const resumeTemplate: string = `
   # Wade Loccisano
@@ -92,6 +93,9 @@ const skills = [
 
 const experiences = [
   {
+    position: 'Full Stack Software Developer',
+    org: 'MadeLabs LLC.',
+    dates: 'April 2021 - April 2024',
     titleLine: 'Full Stack Software Developer | MadeLabs LLC. | April 2021 - April 2024',
     description: `
           Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
@@ -99,7 +103,6 @@ const experiences = [
           Participated in code reviews and quality assurance processes to ensure code integrity and performance.
     `,
     technologies: {
-      // front-end
       frontEnd: [
         "HTML/CSS",
         "JavaScript",
@@ -119,11 +122,6 @@ const experiences = [
         "Docker",
         "Terraform",
       ],
-
-
-      // "HTML/CSS",
-      // "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
-      // "TypeScript (Next.js, TSX, Angular)",
     },
   },
 ];
@@ -232,38 +230,11 @@ export default function Home() {
             </div>
             <div>
               {/* Skills scroller */}
-              <div className="py-4 flex flex-col justify-between md:flex-row flex-wrap">
-                {skills.map((skill, i) => {
-                  return (
-                    <div key={i} className="md:w-[310px] flex pb-8">
-                      <div className="rounded-lg shadow-lg bg-white">
-                        <div className="bg-gradient-to-r from-[#B89527] via-[#D4AF37] to-[#E5C845] bg-cover h-8 sm:h-12"></div>
-                        <div className="px-8 py-4">
-                          <div className="text-2xl">
-                            {skill.skillName}
-                          </div>
-                          {skill.listItems.map((item, i) => {
-                            return (
-                              <p key={i} className="text-md">
-                                {item}
-                              </p>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-                {/* <div className="w-[244px] border border-black">
-                  <div className="bg-cover bg-red-200 h-8 sm:h-12"></div>
-                  <div className="text-2xl">
-                    Skill Name
-                  </div>
-                  <div>
-
-                  </div>
-                </div> */}
-              </div>
+              {projects ? (
+                <div>
+                  <SkillsCards skills={skills} />
+                </div>
+              ) : null}
               {/* <div className="flex">
                 <button>
                   Scroll Left
@@ -385,6 +356,16 @@ export default function Home() {
                               <div className="text-2xl mb-2">
                                 {experience.titleLine}
                               </div>
+
+                              {/* <div className="text-2xl mb-2">
+                                {experience.position}
+                              </div>
+                              <div className="text-2xl mb-2">
+                                {experience.org}
+                              </div>
+                              <div className="text-2xl mb-2">
+                                {experience.dates}
+                              </div> */}
                               <div className="text-lg">
                                 {experience.description}
                               </div>
@@ -421,7 +402,7 @@ export default function Home() {
             </div>
 
             {projects ? (
-              <div className="bg-gray-200">
+              <div className="bg-gray-200 rounded-md">
                 <ProjectExplorer projects={projects} />
               </div>
             ) : null}

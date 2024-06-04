@@ -14,36 +14,42 @@ export const Footer = () => {
           <div className="flex flex-col items-left">
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
-            <div className="text-lg px-8 py-2 lg:py-6">
-              About Me
-              <div className="text-xs py-2">
-                Learn about the site&apos;s creator.
+            <Link href="/about" target="_blank">
+              <div className="text-lg px-8 py-2 lg:py-6">
+                About Me
+                <div className="text-xs py-2">
+                  Learn about this site&apos;s creator.
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
           </div>
           <div className="flex flex-col items-left">
-            <div className="text-lg px-8 py-2 lg:py-6">
-              About this Site
-              <div className="text-xs py-2">
-                A bit about what&apos;s behind this site.
+            <Link href="/about-site" target="_blank">
+              <div className="text-lg px-8 py-2 lg:py-6">
+                About this Site
+                <div className="text-xs py-2">
+                  A bit about what&apos;s behind this site.
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
           </div>
           <div className="flex flex-col items-left">
-            <div className="text-lg px-8 py-2 lg:py-6">
-              Apps
-              <div className="text-xs py-2">
-                Some other apps.
+            <Link href="/other-apps" target="_blank">
+              <div className="text-lg px-8 py-2 lg:py-6">
+                Apps
+                <div className="text-xs py-2">
+                  Some other apps.
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
           </div>
-          <div className="flex flex-col items-left">
+          {/* <div className="flex flex-col items-left">
             <div className="text-lg px-8 py-2 lg:py-6">
               Contact
               <div className="text-xs py-2">
@@ -52,7 +58,7 @@ export const Footer = () => {
             </div>
             <div className="border-t-2 border-slate-200 mx-8 lg:hidden">
             </div>
-          </div>
+          </div> */}
 
           {/* <Link href="https://www.linkedin.com/in/wade-loccisano/" target="_blank">
             <div className="text-lg p-4">
@@ -84,7 +90,7 @@ export const Footer = () => {
               <div className="text-xl p-4">
                 {/* Language Select */}
               </div>
-              <Link href="/privacy" target="_blank">
+              <Link href="/privacy-policy" target="_blank">
                 <div className="text-sm p-2 lg:p-6">
                   Privacy Policy
                 </div>
