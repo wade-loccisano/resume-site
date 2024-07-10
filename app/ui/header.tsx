@@ -29,8 +29,8 @@ export const Header = () => {
               </div>
             </div> */}
 
-          <div className="flex flex-row p-4">
-            <ThemeSelector></ThemeSelector>
+          <div className="flex flex-row p-4 mt-6">
+            {/* <ThemeSelector></ThemeSelector> */}
             {/* <button
               >
                 <div className="min-w-[90px]">

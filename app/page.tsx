@@ -1,61 +1,7 @@
 import { ProjectExplorer } from "@/app/ui/project-explorer";
 import { SkillsCards } from "./ui/skills-cards";
-
-const resumeTemplate: string = `
-  # Wade Loccisano
-
-  [Pittsburgh, Pennsylvania, 16117] | [724 - 494 - 4379] | [wade.loccisano@gmail.com]
-  
-  ## About:
-  Dynamic and results - oriented Software Developer with a proven track record of delivering high - quality software solutions.Skilled in full - stack development, Agile methodologies, and continuous integration practices.Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
-
-  ## Skills:
-
-  ### Programming Languages and Frameworks:
-
-  Proficient in programming languages: JavaScript, TypeScript, C#, Python
-  Experienced in web development frameworks: React, Angular, NextJs
-
-  ### Database Management and ORM:
-
-  Strong understanding of relational and NoSQL databases: MySQL, MongoDB
-  Worked with ORMs: Entity Framework, !!!
-
-  ### Development Tools and Methodologies:
-
-  Familiarity with version control systems: Git
-  Experienced with Agile development methodologies
-  Excellent problem-solving and analytical skills
-  
-  ## Experience:
-  
-  ### Full Stack Software Developer | MadeLabs LLC. | April 2021 - Present
-  
-  Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
-  Collaborated with cross - functional teams to design and implement scalable software solutions, adhering to Agile development practices.
-  Participated in code reviews and quality assurance processes to ensure code integrity and performance.
-  
-  ## Projects:
-  
-  ### Resume Site
-  
-  Developed a website to host this resume using a NextJS front-end with TailwindCss to handle theming.
-  Implemented a Docker container and deployed to!!! to allow multi - region availability.
-  Added!!! analytics to track some basic information about users.
-  
-  ## Qualifications:
-  
-  ### Education:
-  Web Application Development Bootcamp
-  Tech Elevator, City, State
-  Graduated: February 2021
-
-  ### Certifications
-  AWS Certified Cloud Practitioner
-  
-  ## References:
-  Available upon request.
-`;
+import { Splash } from "./ui/splash";
+import { Intro } from "./ui/intro";
 
 const skills = [
   {
@@ -193,32 +139,35 @@ export default function Home() {
         <div id="splash-section">
           <div className="custom-max-width">
             <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
-              <div id="left" className="flex-1 lg:flex-1/2">
-                <div className="text-5xl mb-2">
-                  Wade Loccisano
-                </div>
-                <div className="text-xl mb-6">
-                  {/* tagline */}
-                  Building Tomorrow&apos;s Solutions...
-                  <br />
-                  Today, Your Full Stack Partner.
-                </div>
-                {/* <button className="border border-black p-2">
-                  Contact
-                </button> */}
-              </div>
-              <div id="right" className="flex-1 lg:flex-1/2 bg-gray-900 p-4 font-['monospace'] border border-gray-400 text-left">
-                {/* <div className="text-xl">
-                  About:
-                </div> */}
-                <div className="text-lg">
-                  Dynamic and results-oriented Software Developer with a proven track record of delivering high-quality software solutions. Skilled in full-stack development, Agile methodologies, and continuous integration practices. Seeking to leverage expertise in software engineering to contribute to innovative projects in a collaborative team environment.
-                </div>
+              <Splash splashInfo={['x']} />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
+        {/* Splash Screen */}
+        <div id="splash-section">
+          <div className="custom-max-width">
+            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
+              <Splash splashInfo={['x']} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="intro-section" className="flex justify-center min-w-[100%]">
+        <div className="custom-max-width">
+          <div id="intro-container" className="px-2 sm:px-0 flex flex-col py-28">
+            <div>
+              {/* Intro Section */}
+              <div>
+                <Intro intro={skills} />
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section id="skills-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">
           <div id="skills-container" className="px-2 sm:px-0 flex flex-col py-28">
