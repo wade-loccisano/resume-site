@@ -1,6 +1,7 @@
 import { ProjectExplorer } from "@/app/ui/project-explorer";
 import { SkillsCards } from "./ui/skills-cards";
 import { Splash } from "./ui/splash";
+import { Intro } from "./ui/intro";
 
 const skills = [
   {
@@ -143,6 +144,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
+        {/* Splash Screen */}
+        <div id="splash-section">
+          <div className="custom-max-width">
+            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
+              <Splash splashInfo={['x']} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="intro-section" className="flex justify-center min-w-[100%]">
+        <div className="custom-max-width">
+          <div id="intro-container" className="px-2 sm:px-0 flex flex-col py-28">
+            <div>
+              {/* Intro Section */}
+              <div>
+                <Intro intro={skills} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="skills-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">
           <div id="skills-container" className="px-2 sm:px-0 flex flex-col py-28">
