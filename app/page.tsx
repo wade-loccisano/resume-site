@@ -5,129 +5,125 @@ import { Intro } from "./ui/intro";
 
 const skills = [
   {
-    skillName: 'Front-end',
-    listItems: [
+    category: 'Front-end',
+    skills: [
       "HTML/CSS",
-      "JavaScript (ES6, React, Redux, Node.js, Next.js, JSX)",
-      "TypeScript (Next.js, TSX, Angular)",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Next.js",
+      "React",
+      "Redux",
     ],
   },
   {
-    skillName: 'Backend and Database',
-    listItems: [
-      "C# (.NET, REST APIs)",
-      "SQL (Postgresql)",
-      "ORM (Entity Framework, Prisma)",
+    category: 'Back-end',
+    skills: [
+      "C#",
+      ".NET",
+      "REST APIs",
+      "SQL",
+      "PostgreSQL",
+      "Entity Framework",
+      "Prisma",
     ],
   },
   {
-    skillName: 'DevOps and Cloud',
-    listItems: [
-      "Cloud (AWS)",
-      "Python (Flask, Pandas)",
-      "Version Control and CI/CD (Git, Docker)",
+    category: 'DevOps',
+    skills: [
+      "Cloud",
+      "Amazon Web Services (AWS)",
+      "Python",
+      "Git",
+      "Docker",
+      "Terraform"
     ],
   },
-  // {
-  //   skillName: 'Agile',
-  //   listItems: [
-  //     "Experienced with Agile development methodologies",
-  //     "Excellent problem-solving and analytical skills",
-  //   ],
-  // },
 ];
 
 const experiences = [
   {
-    position: 'Full Stack Software Developer',
-    org: 'MadeLabs LLC.',
+    role: 'Full-Stack Software Developer',
+    org: 'MadeLabs Technology',
     dates: 'April 2021 - April 2024',
-    titleLine: 'Full Stack Software Developer | MadeLabs LLC. | April 2021 - April 2024',
-    description: `
-          Developed and maintained web applications using React.js, resulting in improved user experience and increased client satisfaction.
-          Collaborated with cross-functional teams to design and implement scalable software solutions, adhering to Agile development practices.
-          Participated in code reviews and quality assurance processes to ensure code integrity and performance.
-    `,
-    technologies: {
-      frontEnd: [
-        "HTML/CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Angular",
-        "Node",
-        "Next.js",
-      ],
-      backEnd: [
-        "C#",
-        "SQL",
-        "Entity Framework"
-      ],
-      devops: [
-        "AWS",
-        "Docker",
-        "Terraform",
-      ],
-    },
+    lineItems: [
+      "Developed performant and reusable React components in the Next.js framework relying on Tailwind CSS for meeting design and theming requirements as well as Prisma to assist with database access and management.",
+      // "Delivered new features using Prisma ORM as to assist with database management.",
+      "Utilized a tech stack composed of TypeScript, .NET, and PostgreSQL to develop feature-rich, scalable applications that would meet the needs of the aviation industry.",
+      "Used Python scripts powered by AWS Lambda and orchestrated by Amazon Step Functions to retrieve data from FTP sources and move it to Amazon S3.",
+      "Ensured secure authentication and authorization to applications with Amazon Cognito user pools.",
+      "Expanded Terraform configurations to include the neccessary delcarations to standardize management of new infrastructure.",
+    ],
+
+    // technologies: {
+    //   frontEnd: [
+    //     "HTML/CSS",
+    //     "JavaScript",
+    //     "TypeScript",
+    //     "React",
+    //     "Angular",
+    //     "Node.js",
+    //     "Next.js",
+    //   ],
+    //   backEnd: [
+    //     "C#",
+    //     "SQL",
+    //     "Entity Framework"
+    //   ],
+    //   devops: [
+    //     "AWS",
+    //     "Docker",
+    //     "Terraform",
+    //   ],
+    // },
+  },
+];
+
+
+const certifications = [
+  // {
+  //   name: 'AWS Solutions Architect Associate',
+  //   issuedBy: "Amazon Web Services",
+  //   date: "August 2024",
+  // },
+  {
+    name: 'AWS Certified Cloud Practitioner',
+    issuedBy: "Amazon Web Services",
+    date: "September 2022",
   },
 ];
 
 const projects = [
   {
-    name: 'Project 1',
-    description: `
-          This is a description of the project. Let us
-          talk about what we did, what we are doing,
-          and what we plan on doing.
-    `,
-    image: "image"
-  },
-  {
-    name: 'Project 2',
-    description: `
-          This is a description of the project. Let us
-          talk about what we did, what we are doing,
-          and what we plan on doing.
-    `,
-    image: "image"
-  },
-  {
-    name: 'Project 3',
-    description: `
-          This is a description of the project. Let us
-          talk about what we did, what we are doing,
-          and what we plan on doing.
-    `,
-    image: "image"
-  },
+    name: 'Resume to Website Pipeline',
+    org: 'Thunder Sheep LLC.',
+    dates: 'April 2024 - Present',
+    lineItems: [
+      "Developed this website to host a markdown copy of my resume as webpage.",
+    ],
+  }
+
+  // {
+  //   name: 'Project 1',
+  //   description: `
+  //         This is a description of the project. Let us
+  //         talk about what we did, what we are doing,
+  //         and what we plan on doing.
+  //   `,
+  //   image: "image"
+  // },
 ];
 
-const certifications = [
+const educations = [
   {
-    name: 'AWS Certified Cloud Practitioner',
-    description: `
-      Gained foundational knowledge of cloud concepts, 
-      AWS services, security, architecture, pricing, and 
-      support to aid in leveraging cloud technologies 
-      to optimize business solutions and enhance scalability.
-    `,
+    name: 'Web Application Development Bootcamp',
+    org: "Tech Elevator: Coding Bootcamp",
+    date: "Graduated: February 2021",
   },
   {
-    name: 'Tech Elevator Coding Bootcamp',
-    description: `
-      Attended a 14-week coding bootcamp learning how to 
-      develop dynamic web-based software systems using the 
-      Java programming language.
-    `,
-  },
-  {
-    name: 'B.A. Economics',
-    description: `
-      Obtained BA in Economics, mastering analytical skills 
-      and understanding economic principles. Proficient in 
-      applying economic theories to solve real-world 
-      problems and make informed business decisions.
-    `,
+    name: 'Bachelor of Economics',
+    org: "Penn State",
+    date: "Graduated: Spring 2016",
   },
 ];
 
@@ -159,38 +155,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="" className="flex justify-center min-w-[100%]">
+      <section id="skills-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">
-          <div id="" className="px-2 sm:px-0 flex flex-col py-3">
-            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+          <div id="skills-container" className="px-2 sm:px-0 flex flex-col py-3">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Skills
             </div>
             <div> {/* skills container thing*/}
-              <div>
-                <div className="pt-3">
-                  Front-end
-                </div>
-                <div className="flex flex-row flex-wrap">
-                  <div className="m-1 px-2 border border-black rounded-full bg-white">
-                    HTML/CSS
+              {skills.map((skill, i) => {
+                return (
+                  <div key={i}>
+                    <div className="pt-3">
+                      {skill.category}
+                    </div>
+                    <div className="flex flex-row flex-wrap">
+                      {skill.skills.map((name, i) => {
+                        return (
+                          <div key={i} className="m-1 px-2 border border-black rounded-full bg-white">
+                            {name}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className="m-1 px-2 border border-black rounded-full">
-                    JavaScript
-                  </div>
-                  <div className="m-1 px-2 border border-black rounded-full flex">
+                );
+              })}
+              {/* <div className="m-1 px-2 border border-black rounded-full flex">
                     <div className="font-bold">TypeScript:</div>&nbsp;
                     <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
-                  </div>
-                  <div className="m-1 px-2 border border-black rounded-full">
-                    Next.js
-                  </div>
-                  <div className="m-1 px-2 border border-black rounded-full">
-                    Angular
-                  </div>
-                </div>
-              </div>
+                  </div> */}
 
-              <div className="pt-3">Back-end</div>
+              {/* <div className="pt-3">Back-end</div>
               <div className="flex flex-row flex-wrap">
                 <div className="m-1 px-2 border border-black rounded-full">
                   HTML/CSS
@@ -228,7 +223,7 @@ export default function Home() {
                 <div className="m-1 px-2 border border-black rounded-full">
                   Angular
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -237,36 +232,39 @@ export default function Home() {
       <section id="experience-section" className="min-w-[100%]">
         <div className="custom-max-width">
           <div id="experience-container" className="px-4 sm:px-0 flex flex-col py-3">
-            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Experience
             </div>
             <div>
               {experiences.map((experience, i) => {
                 return (
-                  <div key={i} className="py-2">
-                    <div className="rounded-lg shadow-lg bg-white">
-                      <div className="p-4">
-                        <div className="flex flex-col">
-                          <div className="flex justify-between">
-                            <div className="">
-                              <div className="">
-                                MadeLabs Technology
-                              </div>
-                              <div className="">
-                                Software Developer
-                              </div>
+                  <div key={i} className="">
+                    <div className="">
+                      <div className="p-4 flex flex-col">
+                        <div className="flex justify-between">
+                          <div className="">
+                            <div className="text-xl font-bold">
+                              {experience.org}
                             </div>
-                            <div>
-                              April 2021 - April 2024
+                            <div className="text-lg italic">
+                              {experience.role}
                             </div>
                           </div>
+                          <div className="text-lg italic content-center">
+                            {experience.dates}
+                          </div>
+                        </div>
 
-                          {/* <div className="text-2xl mb-2">
-                                {experience.titleLine}
-                              </div>
-                              <div className="text-lg">
-                                {experience.description}
-                              </div> */}
+                        <div className="px-6 pt-3 pb-0">
+                          <ul className="list-disc list-outside ml-3">
+                            {experience.lineItems.map((item, i) => {
+                              return (
+                                <li key={i} className="mb-1 pl-4">
+                                  {item}
+                                </li>
+                              );
+                            })}
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -280,14 +278,35 @@ export default function Home() {
 
       <section id="certification-section">
         <div className="custom-max-width">
-          <div id="certification-container" className="px-4 sm:px-0 flex flex-col py-3">
-            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+          <div id="certification-container" className="px-4 sm:px-0 flex flex-col ">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Certifications
             </div>
-            <div className="py-3">
-              <div>
-                AWS Certified Cloud Practitioner
-              </div>
+            <div className="">
+              {certifications.map((certification, i) => {
+                return (
+                  <div key={i} className="">
+                    <div className="">
+                      <div className="px-4 pt-3 pb-4 flex flex-col">
+                        <div className="flex justify-between">
+                          <div className="">
+                            <div className="text-xl font-bold">
+                              {certification.name}
+                            </div>
+                            <div className="text-lg italic">
+                              {certification.issuedBy}
+                            </div>
+                          </div>
+                          <div className="text-lg italic content-center">
+                            Issued: {certification.date}
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -296,40 +315,94 @@ export default function Home() {
       <section id="project-section">
         <div className="custom-max-width">
           <div id="project-container" className="px-4 sm:px-0 flex flex-col py-3">
-            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Projects
             </div>
-            <div className="py-3">
-              <div>
-                ECS Terraformed Resume Website
-              </div>
-            </div>
+            {projects.map((project, i) => {
+              return (
+                <div key={i} className="">
+                  <div className="">
+                    <div className="p-4 flex flex-col">
+                      <div className="flex justify-between">
+                        <div className="">
+                          <div className="text-xl font-bold">
+                            {project.name}
+                          </div>
+                          <div className="text-lg italic">
+                            {project.org}
+                          </div>
+                        </div>
+                        <div className="text-lg italic content-center">
+                          {project.dates}
+                        </div>
+                      </div>
+                      <div className="px-6 pt-3 pb-0">
+                        <ul className="list-disc list-inside">
+                          {project.lineItems.map((item, i) => {
+                            return (
+                              <li key={i} className="mb-1">
+                                {item}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section id="education-section">
         <div className="custom-max-width">
-          <div id="education-container" className="px-4 sm:px-0 flex flex-col py-3">
-            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+          <div id="education-container" className="px-4 sm:px-0 flex flex-col">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Education
             </div>
-            <div className="py-3">
+            {educations.map((education, i) => {
+              return (
+                <div key={i} className="">
+                  <div className="">
+                    <div className="px-4 pt-3 pb-4 flex flex-col">
+                      <div className="flex justify-between">
+                        <div className="">
+                          <div className="text-xl font-bold">
+                            {education.name}
+                          </div>
+                          <div className="text-lg italic">
+                            {education.org}
+                          </div>
+                        </div>
+                        <div className="text-lg italic content-center">
+                          {education.date}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+
+            {/* <div className="py-3">
               <div>
                 Web Application Development Bootcamp
-                Tech Elevator, National Live Remote, United States
+                Tech Elevator, National Live Remote
                 Graduated: February 2021
 
                 Bachelor of Economics
-                Penn State, United States
+                Penn State
                 Graduated: Spring 2016
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-      <section id="hobby-section">
+      {/* <section id="hobby-section">
         <div className="custom-max-width">
           <div id="hobby-container" className="px-4 sm:px-0 flex flex-col py-3">
             <div className="text-xl md:text-2xl border-b-2 border-slate-400">
@@ -342,7 +415,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
     </main >
   );

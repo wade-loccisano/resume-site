@@ -25,30 +25,30 @@ export const Intro = ({
         <div className="bg-gradient-to-r from-[#B89527] via-[#D4AF37] to-[#E5C845] bg-cover h-4"></div>
         <div className="px-4 py-6">
           <div className="flex justify-between">
-            <div>
-              <div className="text-3xl ">
+            <div className='content-between'>
+              <div className="text-4xl mb-3">
                 Wade Loccisano
               </div>
               <div className="text-2xl">
                 Software Engineer
               </div>
             </div>
-            <div className="flex flex-col">
-              <div>
-                Phone
+            <div className="flex flex-col text-right">
+              <div className="font-bold mb-1">
+                Phone: <span className="font-normal">(724) 494-4379</span>
               </div>
-              <div>
-                Email
+              <div className="font-bold mb-1">
+                Email: <span className="font-normal">wade.loccisano@gmail.com</span>
               </div>
-              <div>
-                LinkedIn
+              <div className="font-bold">
+                LinkedIn: <a target="_blank" className="font-normal" href={"https://linkedin.com/in/wade-loccisano"}>linkedin.com/in/wade-loccisano</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className='pt-6'>
-        Software Developer with experience in full-stack development, cloud architecture, and continuous integration practices. Experienced in building websites and applications that have empowered users across a variety of industries including aviation, commerce, and project planning.
+      <div className='pt-6 text-lg'>
+        Software Engineer with experience in full-stack development, cloud architecture, and continuous integration practices. Experienced in building websites and applications that have empowered users across a variety of industries including aviation, commerce, and project planning. Actively working with Cloud platforms and services to deliver tomorrow's technology solutions, today.
       </div>
     </>
   );
