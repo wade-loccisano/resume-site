@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false, // Remove when types are fleshed out
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
