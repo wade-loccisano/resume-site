@@ -48,7 +48,7 @@ export const Intro = ({
         </div>
       </div>
       <div className='pt-6 text-lg'>
-        Software Engineer with experience in full-stack development, cloud architecture, and continuous integration practices. Experienced in building websites and applications that have empowered users across a variety of industries including aviation, commerce, and project planning. Actively working with Cloud platforms and services to deliver tomorrow's technology solutions, today.
+        Software Engineer with experience in full-stack development, cloud architecture, and continuous integration practices. Experienced in building websites and applications that have empowered users across a variety of industries including aviation, commerce, and project planning. Actively working with Cloud platforms and services to deliver tomorrow&apos;s technology solutions, today.
       </div>
     </>
   );
