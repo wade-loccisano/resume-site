@@ -134,8 +134,9 @@ const certifications = [
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-sans pt-[56px]">
-      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
-        {/* Splash Screen */}
+      {/* Splash Screen */}
+      {/* <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]"> */}
+      {/* <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
         <div id="splash-section">
           <div className="custom-max-width">
             <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
@@ -143,21 +144,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="flex justify-center bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-600 bg-cover text-white min-w-[100%]">
-        {/* Splash Screen */}
-        <div id="splash-section">
-          <div className="custom-max-width">
-            <div id="splash-container" className="flex flex-col lg:flex-row px-4 py-32 text-center lg:text-left">
-              <Splash splashInfo={['x']} />
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */}
 
       <section id="intro-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">
-          <div id="intro-container" className="px-2 sm:px-0 flex flex-col py-28">
+          <div id="intro-container" className="px-2 sm:px-0 flex flex-col pt-12 pb-3">
             <div>
               {/* Intro Section */}
               <div>
@@ -167,6 +158,174 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="" className="flex justify-center min-w-[100%]">
+        <div className="custom-max-width">
+          <div id="" className="px-2 sm:px-0 flex flex-col py-3">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+              Skills
+            </div>
+            <div> {/* skills container thing*/}
+              <div>
+                <div className="pt-3">
+                  Front-end
+                </div>
+                <div className="flex flex-row flex-wrap">
+                  <div className="m-1 px-2 border border-black rounded-full bg-white">
+                    HTML/CSS
+                  </div>
+                  <div className="m-1 px-2 border border-black rounded-full">
+                    JavaScript
+                  </div>
+                  <div className="m-1 px-2 border border-black rounded-full flex">
+                    <div className="font-bold">TypeScript:</div>&nbsp;
+                    <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
+                  </div>
+                  <div className="m-1 px-2 border border-black rounded-full">
+                    Next.js
+                  </div>
+                  <div className="m-1 px-2 border border-black rounded-full">
+                    Angular
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3">Back-end</div>
+              <div className="flex flex-row flex-wrap">
+                <div className="m-1 px-2 border border-black rounded-full">
+                  HTML/CSS
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full">
+                  JavaScript
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full flex">
+                  <div className="font-bold">TypeScript:</div>&nbsp;
+                  <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full">
+                  Next.js
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full">
+                  Angular
+                </div>
+              </div>
+
+              <div className="pt-3">DevOps</div>
+              <div className="flex flex-row flex-wrap">
+                <div className="m-1 px-2 border border-black rounded-full">
+                  HTML/CSS
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full">
+                  JavaScript
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full flex">
+                  <div className="font-bold">TypeScript:</div>&nbsp;
+                  <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full">
+                  Next.js
+                </div>
+                <div className="m-1 px-2 border border-black rounded-full">
+                  Angular
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience-section" className="min-w-[100%]">
+        <div className="custom-max-width">
+          <div id="experience-container" className="px-4 sm:px-0 flex flex-col py-3">
+            <div className="text-xl md:text-2xl border-b-2 border-slate-400">
+              Experience
+            </div>
+            <div>
+              <div className="py-4 flex flex-col justify-between lg:flex-row">
+                {experiences.map((experience, i) => {
+                  return (
+                    <div key={i} className="py-2 flex">
+                      <div className="rounded-lg shadow-lg bg-white">
+                        <div className="p-4">
+                          <div className="flex flex-col lg:flex-row">
+
+                            <div className="p-1 text-md basis-1/3">
+                              {/* {experience.technologies.map((technology) => {
+                                  return (
+                                    <div className="m-1 px-2 border border-black rounded-full">
+                                      {technology}
+                                    </div>
+                                  );
+                                })} */}
+                              <div className="text-sm text-slate-400">Front-end</div>
+                              <div className="flex flex-wrap">
+                                {experience.technologies.frontEnd.map((technology) => {
+                                  return (
+                                    <>
+                                      <div className="m-1 px-2 border border-black rounded-full">
+                                        {technology}
+                                      </div>
+                                    </>
+                                  );
+                                })}
+                              </div>
+                              <div className="text-sm text-slate-400">Backend</div>
+                              <div className="flex flex-wrap">
+                                {experience.technologies.backEnd.map((technology) => {
+                                  return (
+                                    <>
+                                      <div className="m-1 px-2 border border-black rounded-full">
+                                        {technology}
+                                      </div>
+                                    </>
+                                  );
+                                })}
+                              </div>
+                              <div className="text-sm text-slate-400">DevOps</div>
+                              <div className="flex flex-wrap">
+                                {experience.technologies.devops.map((technology) => {
+                                  return (
+                                    <>
+                                      <div className="m-1 px-2 border border-black rounded-full">
+                                        {technology}
+                                      </div>
+                                    </>
+                                  );
+                                })}
+                              </div>
+                            </div>
+
+                            <div className="p-1 basis-2/3">
+                              <div className="text-2xl mb-2">
+                                {experience.titleLine}
+                              </div>
+
+                              {/* <div className="text-2xl mb-2">
+                                {experience.position}
+                              </div>
+                              <div className="text-2xl mb-2">
+                                {experience.org}
+                              </div>
+                              <div className="text-2xl mb-2">
+                                {experience.dates}
+                              </div> */}
+                              <div className="text-lg">
+                                {experience.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       <section id="skills-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">

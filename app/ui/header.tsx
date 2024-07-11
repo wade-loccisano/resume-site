@@ -6,13 +6,13 @@ export const Header = () => {
     <header>
       <section id="header-section" className="w-full fixed bg-white shadow-lg z-50">
         <div className="flex flex-row justify-evenly">
-          <Link
+          {/* <Link
             href="/"
           >
             <div className="p-3 text-xl">
               Wade Loccisano
             </div>
-          </Link>
+          </Link> */}
 
           {/* <div className="flex flex-row p-2">
               <div>
