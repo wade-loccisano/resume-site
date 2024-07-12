@@ -144,7 +144,7 @@ export default function Home() {
 
       <section id="intro-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">
-          <div id="intro-container" className="px-2 sm:px-0 flex flex-col pt-12 pb-3">
+          <div id="intro-container" className="px-2 sm:px-0 flex flex-col pt-10 pb-3">
             <div>
               {/* Intro Section */}
               <div>
@@ -157,7 +157,7 @@ export default function Home() {
 
       <section id="skills-section" className="flex justify-center min-w-[100%]">
         <div className="custom-max-width">
-          <div id="skills-container" className="px-2 sm:px-0 flex flex-col py-3">
+          <div id="skills-container" className="px-2 sm:px-0 flex flex-col py-3 shrink-0">
             <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Skills
             </div>
@@ -180,50 +180,6 @@ export default function Home() {
                   </div>
                 );
               })}
-              {/* <div className="m-1 px-2 border border-black rounded-full flex">
-                    <div className="font-bold">TypeScript:</div>&nbsp;
-                    <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
-                  </div> */}
-
-              {/* <div className="pt-3">Back-end</div>
-              <div className="flex flex-row flex-wrap">
-                <div className="m-1 px-2 border border-black rounded-full">
-                  HTML/CSS
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full">
-                  JavaScript
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full flex">
-                  <div className="font-bold">TypeScript:</div>&nbsp;
-                  <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full">
-                  Next.js
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full">
-                  Angular
-                </div>
-              </div>
-
-              <div className="pt-3">DevOps</div>
-              <div className="flex flex-row flex-wrap">
-                <div className="m-1 px-2 border border-black rounded-full">
-                  HTML/CSS
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full">
-                  JavaScript
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full flex">
-                  <div className="font-bold">TypeScript:</div>&nbsp;
-                  <div>Next.js,&nbsp;TSX,&nbsp;Angular</div>
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full">
-                  Next.js
-                </div>
-                <div className="m-1 px-2 border border-black rounded-full">
-                  Angular
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -241,16 +197,16 @@ export default function Home() {
                   <div key={i} className="">
                     <div className="">
                       <div className="p-4 flex flex-col">
-                        <div className="flex justify-between">
+                        <div className="flex flex-col sm:flex-row justify-between">
                           <div className="">
-                            <div className="text-xl font-bold">
+                            <div className="text-lg md:text-xl font-bold">
                               {experience.org}
                             </div>
-                            <div className="text-lg italic">
+                            <div className="text-base md:text-lg italic">
                               {experience.role}
                             </div>
                           </div>
-                          <div className="text-lg italic content-center">
+                          <div className="text-base md:text-lg italic content-center">
                             {experience.dates}
                           </div>
                         </div>
@@ -278,36 +234,37 @@ export default function Home() {
 
       <section id="certification-section">
         <div className="custom-max-width">
-          <div id="certification-container" className="px-4 sm:px-0 flex flex-col ">
+          <div id="certification-container" className="px-4 sm:px-0 flex flex-col">
             <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Certifications
             </div>
-            <div className="">
-              {certifications.map((certification, i) => {
-                return (
-                  <div key={i} className="">
-                    <div className="">
-                      <div className="px-4 pt-3 pb-4 flex flex-col">
-                        <div className="flex justify-between">
-                          <div className="">
-                            <div className="text-xl font-bold">
-                              {certification.name}
-                            </div>
-                            <div className="text-lg italic">
-                              {certification.issuedBy}
-                            </div>
+            {certifications.map((certification, i) => {
+              return (
+                <div key={i} className="">
+                  <div className="">
+                    <div className="px-4 pt-3 pb-4">
+                      <div className="flex flex-col sm:flex-row sm:justify-between">
+                        <div className="">
+                          <div className="text-lg md:text-xl font-bold">
+                            {certification.name}
                           </div>
-                          <div className="text-lg italic content-center">
-                            Issued: {certification.date}
+                          <div className="text-base md:text-lg italic">
+                            {certification.issuedBy}
                           </div>
                         </div>
-
+                        <div className="text-base md:text-lg italic content-center">
+                          Issued: {certification.date}
+                        </div>
                       </div>
+
                     </div>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
+
+
+
           </div>
         </div>
       </section>
@@ -323,16 +280,16 @@ export default function Home() {
                 <div key={i} className="">
                   <div className="">
                     <div className="p-4 flex flex-col">
-                      <div className="flex justify-between">
+                      <div className="flex flex-col sm:flex-row justify-between">
                         <div className="">
-                          <div className="text-xl font-bold">
+                          <div className="text-lg md:text-xl font-bold">
                             {project.name}
                           </div>
-                          <div className="text-lg italic">
+                          <div className="text-base md:text-lg italic">
                             {project.org}
                           </div>
                         </div>
-                        <div className="text-lg italic content-center">
+                        <div className="text-base md:text-lg italic content-center">
                           {project.dates}
                         </div>
                       </div>
@@ -358,7 +315,7 @@ export default function Home() {
 
       <section id="education-section">
         <div className="custom-max-width">
-          <div id="education-container" className="px-4 sm:px-0 flex flex-col">
+          <div id="education-container" className="px-4 sm:px-0 flex flex-col ">
             <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Education
             </div>
@@ -367,16 +324,16 @@ export default function Home() {
                 <div key={i} className="">
                   <div className="">
                     <div className="px-4 pt-3 pb-4 flex flex-col">
-                      <div className="flex justify-between">
+                      <div className="flex flex-col sm:flex-row justify-between">
                         <div className="">
-                          <div className="text-xl font-bold">
+                          <div className="text-lg md:text-xl font-bold">
                             {education.name}
                           </div>
-                          <div className="text-lg italic">
+                          <div className="text-base md:text-lg italic">
                             {education.org}
                           </div>
                         </div>
-                        <div className="text-lg italic content-center">
+                        <div className="text-base md:text-lg italic content-center">
                           {education.date}
                         </div>
                       </div>
