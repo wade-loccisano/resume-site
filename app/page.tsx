@@ -1,6 +1,3 @@
-import { ProjectExplorer } from "@/app/ui/project-explorer";
-import { SkillsCards } from "./ui/skills-cards";
-import { Splash } from "./ui/splash";
 import { Intro } from "./ui/intro";
 
 const skills = [
@@ -102,16 +99,6 @@ const projects = [
       "Developed this website to host a markdown copy of my resume as webpage.",
     ],
   }
-
-  // {
-  //   name: 'Project 1',
-  //   description: `
-  //         This is a description of the project. Let us
-  //         talk about what we did, what we are doing,
-  //         and what we plan on doing.
-  //   `,
-  //   image: "image"
-  // },
 ];
 
 const educations = [
@@ -261,9 +248,6 @@ export default function Home() {
                 </div>
               );
             })}
-
-
-
           </div>
         </div>
       </section>
