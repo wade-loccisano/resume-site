@@ -210,7 +210,6 @@ export default function Home() {
                             {experience.dates}
                           </div>
                         </div>
-
                         <div className="px-6 pt-3 pb-0">
                           <ul className="list-disc list-outside ml-3">
                             {experience.lineItems.map((item, i) => {
@@ -294,10 +293,10 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="px-6 pt-3 pb-0">
-                        <ul className="list-disc list-inside">
+                        <ul className="list-disc list-outside ml-3">
                           {project.lineItems.map((item, i) => {
                             return (
-                              <li key={i} className="mb-1">
+                              <li key={i} className="mb-1 pl-4">
                                 {item}
                               </li>
                             );
