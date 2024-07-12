@@ -1,5 +1,3 @@
-See a preview [Preview Page](wade-loccisano.github.io/resume-site/)
-
 ## Getting Started Locally
 
 First, run the development server:
