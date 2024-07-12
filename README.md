@@ -1,4 +1,4 @@
-See a preview [Preview Page](https://https://wade-loccisano.github.io/resume-site/)
+See a preview [Preview Page](wade-loccisano.github.io/resume-site/)
 
 ## Getting Started Locally
 
