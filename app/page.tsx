@@ -45,7 +45,6 @@ const experiences = [
     dates: 'April 2021 - April 2024',
     lineItems: [
       "Developed performant and reusable React components in the Next.js framework relying on Tailwind CSS for meeting design and theming requirements as well as Prisma to assist with database access and management.",
-      // "Delivered new features using Prisma ORM as to assist with database management.",
       "Utilized a tech stack composed of TypeScript, .NET, and PostgreSQL to develop feature-rich, scalable applications that would meet the needs of the aviation industry.",
       "Used Python scripts powered by AWS Lambda and orchestrated by Amazon Step Functions to retrieve data from FTP sources and move it to Amazon S3.",
       "Ensured secure authentication and authorization to applications with Amazon Cognito user pools.",
@@ -148,7 +147,7 @@ export default function Home() {
             <div className="text-xl md:text-2xl border-b-2 border-slate-400 font-bold">
               Skills
             </div>
-            <div> {/* skills container thing*/}
+            <div>
               {skills.map((skill, i) => {
                 return (
                   <div key={i}>
@@ -325,19 +324,6 @@ export default function Home() {
                 </div>
               );
             })}
-
-
-            {/* <div className="py-3">
-              <div>
-                Web Application Development Bootcamp
-                Tech Elevator, National Live Remote
-                Graduated: February 2021
-
-                Bachelor of Economics
-                Penn State
-                Graduated: Spring 2016
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
