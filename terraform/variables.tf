@@ -6,6 +6,6 @@ variable "region" {
 
 variable "bucket_name" {
   type        = string
-  default     = "resume-site"
+  default     = "resume-site-bucket-109358230958"
   description = "bucket name"
 }
