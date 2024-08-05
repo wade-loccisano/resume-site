@@ -1,4 +1,5 @@
-output "website_url" {
-  description = "website url"
-  value       = aws_s3_bucket_website_configuration.web-config.website_endpoint
-}
+# output "instance_public_ip" {
+#   description = "public ip for ssh"
+#   value       = aws_instance.server.public_ip
+#   sensitive   = true
+# }

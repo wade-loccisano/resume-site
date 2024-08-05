@@ -4,8 +4,20 @@ variable "region" {
   description = "My default aws region"
 }
 
-variable "bucket_name" {
+variable "tf_state_bucket_name" {
   type        = string
-  default     = "resume-site-bucket-109358230958"
-  description = "bucket name"
+  default     = "app-resume-site-terraform-state"
+  description = "tf state stored under bucket name /state"
+}
+
+variable "public_key" {
+
+}
+
+variable "private_key" {
+
+}
+
+variable "key_name" {
+
 }
