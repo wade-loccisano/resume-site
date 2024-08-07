@@ -50,10 +50,10 @@ jobs:
           fi
       - name: Setup Node
         uses: actions/setup-node@v4
-        working-directory: web
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: ./web
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
