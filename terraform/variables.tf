@@ -11,13 +11,16 @@ variable "tf_state_bucket_name" {
 }
 
 variable "public_key" {
-
+  # type    = string
+  # default = ""
 }
 
 variable "private_key" {
-
+  # type    = string
+  # default = ""
 }
 
 variable "key_name" {
-
+  type    = string
+  default = "deployer-key"
 }
