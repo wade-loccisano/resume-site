@@ -50,8 +50,8 @@ jobs:
           fi
       - name: Setup Node
         uses: actions/setup-node@v4
+        working-directory: web
         with:
-          path: ${{ github.workspace }}/web/
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
