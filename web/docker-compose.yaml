@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
   nextapp:
-    container_name: nextapp
-    image: wade/nextapp
+    container_name: resume-site
+    image: wade587/resume-site
     build: .
     ports:
       - "3000:3000"
